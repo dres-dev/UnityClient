@@ -1,0 +1,14 @@
+{
+  "name": "org.vitrivr.unityinterface.dresapi",
+  "version": "1.0.0-SNAPSHOT",
+  "displayName": "DRES Unity Interface",
+  "description": "An all-unity client for [DRES](https://github.com/dres-dev/DRES) to be used within the vitrivr context.",
+  "unity": "2019.4",
+  "keywords": [
+    "dres","restclient","vitrivr","multimediaretrieval","retreival","multimedia","evaluation"
+  ],
+  "author": {
+    "name": "Florian Spiess & Loris Sauter",
+    "email": "firstname.lastname@unibas.ch"
+  }
+}
