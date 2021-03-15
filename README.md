@@ -14,5 +14,5 @@ This is a upm package, add the following to your `manifest.json` for latest vers
 
 ## Contributors
 
-Florian Spiess @Spiess
-Loris Sauter @sauterl
+- Florian Spiess @Spiess
+- Loris Sauter @sauterl
