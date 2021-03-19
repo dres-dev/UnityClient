@@ -7,7 +7,7 @@ plugins {
 }
 
 /* Setup OpenApi Specs (OAS): Defaults to default.*/
-/* Additional, sensible settings: 
+/* Additional, sensible settings:
  + http://localhost:8080/client-oas.json // Local DRES
  + https://raw.githubusercontent.com/dres-dev/DRES/master/doc/oas-client.json // When oas-client is released
 */
