@@ -1,45 +1,25 @@
 ﻿using System.Threading.Tasks;
-using Org.Vitrivr.DresApi.Api;
-using Org.Vitrivr.DresApi.Client;
 using Org.Vitrivr.DresApi.Model;
-using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Vitrivr.UnityInterface.DresApi
 {
-  public class DresClient : MonoBehaviour
+  /// <summary>
+  /// Instantiable class to contain all client functionality for the DRES API.
+  /// Holds all state information for a DRES user.
+  /// </summary>
+  public class DresClient
   {
-    public DresConfig dresConfig;
+    public UserDetails UserDetails;
 
-    public UserApi UserService;
-    public LogApi LoggingService;
-    public SubmissionApi SubmissionService;
-    
-    public string session; // Could be private
-
-
-    private async void Start()
+    public async Task Login()
     {
-      dresConfig = ConfigManager.Instance.Config;
-      UserService = new UserApi(ConfigManager.Instance.ApiConfiguration);
-      LoggingService = new LogApi(ConfigManager.Instance.ApiConfiguration);
-      SubmissionService = new SubmissionApi(ConfigManager.Instance.ApiConfiguration);
-      await Login(dresConfig.user, dresConfig.password);
-      Debug.Log($"Login gave Session: {session}");
+      var config = DresConfigManager.Instance.Config;
+      UserDetails = await DresWrapper.Login(config.user, config.password);
     }
 
-    public async Task Login(string user, string pw)
+    public async Task<SuccessfulSubmissionsStatus> SubmitResult(string item, int frame)
     {
-      var loginRequest = new LoginRequest(user, pw);
-      var userDetails = await UserService.PostApiLoginAsync(loginRequest);
-      session = userDetails.SessionId;
-    }
-
-    public async Task SubmitResult(string item, int frame)
-    {
-      var submitStatus = await SubmissionService.GetSubmitAsync(collection: null, item: item,
-        frame: frame, session: session);
-      Debug.Log(submitStatus);
+      return await DresWrapper.Submit(item, frame, UserDetails.SessionId);
     }
   }
 }

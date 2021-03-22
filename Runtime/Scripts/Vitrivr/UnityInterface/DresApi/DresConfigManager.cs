@@ -5,78 +5,80 @@ using UnityEngine;
 
 namespace Vitrivr.UnityInterface.DresApi
 {
-  public class ConfigManager
+  public class DresConfigManager
   {
     public const string FileName = "dresapi";
     public const string CredentialsName = "credentials";
     public const string FileExtension = "json";
-    public const string ConfigFile = FileName +"."+FileExtension;
+    public const string ConfigFile = FileName + "." + FileExtension;
     public const string CredentialsFile = CredentialsName + "." + FileExtension;
 
-    private static ConfigManager _instance;
+    private static DresConfigManager _instance;
 
-    public static ConfigManager Instance => _instance ?? (_instance = new ConfigManager());
+    public static DresConfigManager Instance => _instance ?? (_instance = new DresConfigManager());
 
-    private ConfigManager()
+    private DresConfigManager()
     {
       apiConfig = new Configuration {BasePath = Config.Endpoint};
     }
 
-    private DresConfig config;
+    private DresConfig _config;
 
     public DresConfig Config
     {
       get
       {
-        if (config != null)
+        if (_config != null)
         {
-          return config;
+          return _config;
         }
-        
+
         if (File.Exists(GetFilePath(ConfigFile)))
         {
           var streamReader = File.OpenText(GetFilePath(ConfigFile));
           var json = streamReader.ReadToEnd();
           streamReader.Close();
-          config = DresConfig.GetDefault();
-          JsonUtility.FromJsonOverwrite(json, config);
+          _config = DresConfig.GetDefault();
+          JsonUtility.FromJsonOverwrite(json, _config);
         }
         else
         {
-          config = DresConfig.GetDefault();
+          _config = DresConfig.GetDefault();
         }
 
-        if (!config.HasCredentials())
+        if (!_config.HasCredentials())
         {
           if (!File.Exists(GetFilePath(CredentialsFile)))
           {
             throw new FileNotFoundException("Expects a credentials file at " + GetFilePath(CredentialsFile));
           }
+
           var streamReader = File.OpenText(GetFilePath(CredentialsFile));
           var json = streamReader.ReadToEnd();
           streamReader.Close();
           var cred = JsonUtility.FromJson<Credentials>(json);
-          config.user = cred.username;
-          config.password = cred.password;
+          _config.user = cred.username;
+          _config.password = cred.password;
         }
-        return config;
+
+        return _config;
       }
-      set => config = value;
+      set => _config = value;
     }
 
     public void StoreConfig()
     {
-      var user = config.user;
-      var password = config.password;
-      config.user = null;
-      config.password = null;
+      var user = _config.user;
+      var password = _config.password;
+      _config.user = null;
+      _config.password = null;
       var sw = File.CreateText(GetFilePath(ConfigFile));
-      sw.Write(JsonConvert.SerializeObject(config));
+      sw.Write(JsonConvert.SerializeObject(_config));
       sw.WriteLine(""); // empty line at EOF
       sw.Flush();
       sw.Close();
-      config.user = user;
-      config.password = password;
+      _config.user = user;
+      _config.password = password;
     }
 
     private Configuration apiConfig;
