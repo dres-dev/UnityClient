@@ -36,5 +36,11 @@ namespace Vitrivr.UnityInterface.DresApi
       var resultLog = new QueryResultLog(timestamp, sortType, resultSetAvailability, results, events);
       return await LogApi.PostLogResultAsync(session, resultLog);
     }
+
+    public static async Task<SuccessStatus> LogQueryEvents(long timestamp, List<QueryEvent> events, string session)
+    {
+      var queryEventLog = new QueryEventLog(timestamp, events);
+      return await LogApi.PostLogQueryAsync(session, queryEventLog);
+    }
   }
 }

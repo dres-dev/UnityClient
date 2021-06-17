@@ -29,5 +29,10 @@ namespace Vitrivr.UnityInterface.DresApi
       return await DresWrapper.LogResults(timestamp, sortType, resultSetAvailability, results, events,
         UserDetails.SessionId);
     }
+
+    public async Task<SuccessStatus> LogQueryEvents(long timestamp, List<QueryEvent> events)
+    {
+      return await DresWrapper.LogQueryEvents(timestamp, events, UserDetails.SessionId);
+    }
   }
 }
