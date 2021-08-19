@@ -23,6 +23,9 @@ openApiGenerate {
   inputSpec = dresOAS
   outputDir = "$rootDir/Generated"
   packageName = "Org.Vitrivr.DresApi"
+  configOptions = [
+    optionalEmitDefaultValues: "true"
+  ]
 }
 
 /* Customized clean task to delete OpenAPI generated*/
