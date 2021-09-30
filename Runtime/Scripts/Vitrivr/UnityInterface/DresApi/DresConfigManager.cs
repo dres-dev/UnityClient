@@ -43,6 +43,7 @@ namespace Vitrivr.UnityInterface.DresApi
         }
         else
         {
+          Debug.Log($"No DRES config file found at {GetFilePath(ConfigFile)}, using defaults.");
           _config = DresConfig.GetDefault();
         }
 
