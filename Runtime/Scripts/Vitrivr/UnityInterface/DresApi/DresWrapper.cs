@@ -24,12 +24,11 @@ namespace Vitrivr.UnityInterface.DresApi
       return await UserApi.PostApiLoginAsync(loginRequest);
     }
 
-    public static async Task<SuccessfulSubmissionsStatus> Submit(string item, int frame, string session)
+    public static async Task<SuccessfulSubmissionsStatus> Submit(string item, string session, int? frame = null)
     {
       return await SubmissionApi.GetSubmitAsync(item: item, frame: frame, session: session);
     }
 
-    
     public static async Task<SuccessStatus> LogResults(long timestamp, string sortType, string resultSetAvailability,
       List<QueryResult> results, List<QueryEvent> events, string session)
     {

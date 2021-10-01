@@ -18,9 +18,9 @@ namespace Vitrivr.UnityInterface.DresApi
       UserDetails = await DresWrapper.Login(config.user, config.password);
     }
 
-    public async Task<SuccessfulSubmissionsStatus> SubmitResult(string item, int frame)
+    public async Task<SuccessfulSubmissionsStatus> SubmitResult(string item, int? frame = null)
     {
-      return await DresWrapper.Submit(item, frame, UserDetails.SessionId);
+      return await DresWrapper.Submit(item, UserDetails.SessionId, frame);
     }
 
     public async Task<SuccessStatus> LogResults(long timestamp, string sortType, string resultSetAvailability,
