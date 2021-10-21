@@ -11,11 +11,14 @@ plugins {
  + http://localhost:8080/client-oas.json // Local DRES
  + https://raw.githubusercontent.com/dres-dev/DRES/master/doc/oas-client.json // When oas-client is released
 */
-def dresOAS = "https://raw.githubusercontent.com/dres-dev/DRES/dev/doc/oas-client.json"
+def dresOAS = "https://raw.githubusercontent.com/dres-dev/DRES/1.0/doc/oas-client.json"
 /* If gradle gets 'oas' argument (with -Poas="path/to/OAS"), take these */
 if(project.hasProperty('oas')){
     dresOAS = oas
 }
+
+/* Name to add to dlls to avoid Unity loading errors. */
+def dllName = "Dres"
 
 /* The OpenApi generator task */
 openApiGenerate {
@@ -23,6 +26,9 @@ openApiGenerate {
   inputSpec = dresOAS
   outputDir = "$rootDir/Generated"
   packageName = "Org.Vitrivr.DresApi"
+  configOptions = [
+    optionalEmitDefaultValues: "true"
+  ]
 }
 
 /* Customized clean task to delete OpenAPI generated*/
@@ -62,6 +68,9 @@ task modex(type: Exec){
 task deployLibs(type: Copy){
   from(file("$rootDir/Generated/bin"))
   into(file("$rootDir/Runtime/Libs"))
+  rename("RestSharp.dll", "RestSharp.Dres.dll")
+  rename("Newtonsoft.Json.dll", "Newtonsoft.Json.Dres.dll")
+  rename("JsonSubTypes.dll", "JsonSubTypes.Dres.dll")
 }
 
 /* Copy the mandatory link.xml */

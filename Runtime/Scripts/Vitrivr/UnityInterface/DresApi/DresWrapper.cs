@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Org.Vitrivr.DresApi.Api;
 using Org.Vitrivr.DresApi.Model;
 
@@ -20,12 +21,25 @@ namespace Vitrivr.UnityInterface.DresApi
     public static async Task<UserDetails> Login(string user, string password)
     {
       var loginRequest = new LoginRequest(user, password);
-      return await UserApi.PostApiLoginAsync(loginRequest);
+      return await UserApi.PostApiV1LoginAsync(loginRequest);
     }
 
-    public static async Task<SuccessfulSubmissionsStatus> Submit(string item, int frame, string session)
+    public static async Task<SuccessfulSubmissionsStatus> Submit(string item, string session, int? frame = null)
     {
-      return await SubmissionApi.GetSubmitAsync(item: item, frame: frame, session: session);
+      return await SubmissionApi.GetApiV1SubmitAsync(item: item, frame: frame, session: session);
+    }
+
+    public static async Task<SuccessStatus> LogResults(long timestamp, string sortType, string resultSetAvailability,
+      List<QueryResult> results, List<QueryEvent> events, string session)
+    {
+      var resultLog = new QueryResultLog(timestamp, sortType, resultSetAvailability, results, events);
+      return await LogApi.PostApiV1LogResultAsync(session, resultLog);
+    }
+
+    public static async Task<SuccessStatus> LogQueryEvents(long timestamp, List<QueryEvent> events, string session)
+    {
+      var queryEventLog = new QueryEventLog(timestamp, events);
+      return await LogApi.PostApiV1LogQueryAsync(session, queryEventLog);
     }
   }
 }

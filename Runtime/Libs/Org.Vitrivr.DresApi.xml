@@ -1233,7 +1233,7 @@
              Represents a collection of functions to interact with the API endpoints
              </summary>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IClientRunInfoApi.GetApiRuninfoCurrenttaskWithRunid(System.String,System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.IClientRunInfoApi.GetApiV1ClientRunInfoCurrenttaskWithRunid(System.String,System.String)">
              <summary>
              Returns an overview of the currently active task for a run
              </summary>
@@ -1245,7 +1245,7 @@
              <param name="session">Session Token</param>
              <returns>ClientTaskInfo</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IClientRunInfoApi.GetApiRuninfoCurrenttaskWithRunidWithHttpInfo(System.String,System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.IClientRunInfoApi.GetApiV1ClientRunInfoCurrenttaskWithRunidWithHttpInfo(System.String,System.String)">
              <summary>
              Returns an overview of the currently active task for a run
              </summary>
@@ -1257,7 +1257,7 @@
              <param name="session">Session Token</param>
              <returns>ApiResponse of ClientTaskInfo</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IClientRunInfoApi.GetApiRuninfoList(System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.IClientRunInfoApi.GetApiV1ClientRunInfoList(System.String)">
              <summary>
              Lists an overview of all competition runs visible to the current client
              </summary>
@@ -1268,7 +1268,7 @@
              <param name="session">Session Token</param>
              <returns>ClientRunInfoList</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IClientRunInfoApi.GetApiRuninfoListWithHttpInfo(System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.IClientRunInfoApi.GetApiV1ClientRunInfoListWithHttpInfo(System.String)">
              <summary>
              Lists an overview of all competition runs visible to the current client
              </summary>
@@ -1279,7 +1279,7 @@
              <param name="session">Session Token</param>
              <returns>ApiResponse of ClientRunInfoList</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IClientRunInfoApi.GetApiRuninfoCurrenttaskWithRunidAsync(System.String,System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.IClientRunInfoApi.GetApiV1ClientRunInfoCurrenttaskWithRunidAsync(System.String,System.String)">
              <summary>
              Returns an overview of the currently active task for a run
              </summary>
@@ -1291,7 +1291,7 @@
              <param name="session">Session Token</param>
              <returns>Task of ClientTaskInfo</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IClientRunInfoApi.GetApiRuninfoCurrenttaskWithRunidAsyncWithHttpInfo(System.String,System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.IClientRunInfoApi.GetApiV1ClientRunInfoCurrenttaskWithRunidAsyncWithHttpInfo(System.String,System.String)">
              <summary>
              Returns an overview of the currently active task for a run
              </summary>
@@ -1303,7 +1303,7 @@
              <param name="session">Session Token</param>
              <returns>Task of ApiResponse (ClientTaskInfo)</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IClientRunInfoApi.GetApiRuninfoListAsync(System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.IClientRunInfoApi.GetApiV1ClientRunInfoListAsync(System.String)">
              <summary>
              Lists an overview of all competition runs visible to the current client
              </summary>
@@ -1314,7 +1314,7 @@
              <param name="session">Session Token</param>
              <returns>Task of ClientRunInfoList</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IClientRunInfoApi.GetApiRuninfoListAsyncWithHttpInfo(System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.IClientRunInfoApi.GetApiV1ClientRunInfoListAsyncWithHttpInfo(System.String)">
              <summary>
              Lists an overview of all competition runs visible to the current client
              </summary>
@@ -1387,7 +1387,7 @@
              <param name="value">Header field value.</param>
              <returns></returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.ClientRunInfoApi.GetApiRuninfoCurrenttaskWithRunid(System.String,System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.ClientRunInfoApi.GetApiV1ClientRunInfoCurrenttaskWithRunid(System.String,System.String)">
              <summary>
              Returns an overview of the currently active task for a run 
              </summary>
@@ -1396,7 +1396,7 @@
              <param name="session">Session Token</param>
              <returns>ClientTaskInfo</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.ClientRunInfoApi.GetApiRuninfoCurrenttaskWithRunidWithHttpInfo(System.String,System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.ClientRunInfoApi.GetApiV1ClientRunInfoCurrenttaskWithRunidWithHttpInfo(System.String,System.String)">
              <summary>
              Returns an overview of the currently active task for a run 
              </summary>
@@ -1405,7 +1405,7 @@
              <param name="session">Session Token</param>
              <returns>ApiResponse of ClientTaskInfo</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.ClientRunInfoApi.GetApiRuninfoCurrenttaskWithRunidAsync(System.String,System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.ClientRunInfoApi.GetApiV1ClientRunInfoCurrenttaskWithRunidAsync(System.String,System.String)">
              <summary>
              Returns an overview of the currently active task for a run 
              </summary>
@@ -1414,7 +1414,7 @@
              <param name="session">Session Token</param>
              <returns>Task of ClientTaskInfo</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.ClientRunInfoApi.GetApiRuninfoCurrenttaskWithRunidAsyncWithHttpInfo(System.String,System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.ClientRunInfoApi.GetApiV1ClientRunInfoCurrenttaskWithRunidAsyncWithHttpInfo(System.String,System.String)">
              <summary>
              Returns an overview of the currently active task for a run 
              </summary>
@@ -1423,7 +1423,7 @@
              <param name="session">Session Token</param>
              <returns>Task of ApiResponse (ClientTaskInfo)</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.ClientRunInfoApi.GetApiRuninfoList(System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.ClientRunInfoApi.GetApiV1ClientRunInfoList(System.String)">
              <summary>
              Lists an overview of all competition runs visible to the current client 
              </summary>
@@ -1431,7 +1431,7 @@
              <param name="session">Session Token</param>
              <returns>ClientRunInfoList</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.ClientRunInfoApi.GetApiRuninfoListWithHttpInfo(System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.ClientRunInfoApi.GetApiV1ClientRunInfoListWithHttpInfo(System.String)">
              <summary>
              Lists an overview of all competition runs visible to the current client 
              </summary>
@@ -1439,7 +1439,7 @@
              <param name="session">Session Token</param>
              <returns>ApiResponse of ClientRunInfoList</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.ClientRunInfoApi.GetApiRuninfoListAsync(System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.ClientRunInfoApi.GetApiV1ClientRunInfoListAsync(System.String)">
              <summary>
              Lists an overview of all competition runs visible to the current client 
              </summary>
@@ -1447,7 +1447,7 @@
              <param name="session">Session Token</param>
              <returns>Task of ClientRunInfoList</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.ClientRunInfoApi.GetApiRuninfoListAsyncWithHttpInfo(System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.ClientRunInfoApi.GetApiV1ClientRunInfoListAsyncWithHttpInfo(System.String)">
              <summary>
              Lists an overview of all competition runs visible to the current client 
              </summary>
@@ -1460,7 +1460,7 @@
              Represents a collection of functions to interact with the API endpoints
              </summary>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IStatusApi.GetApiStatusTime">
+        <member name="M:Org.Vitrivr.DresApi.Api.IStatusApi.GetApiV1StatusTime">
              <summary>
              Returns the current time on the server.
              </summary>
@@ -1470,7 +1470,7 @@
              <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
              <returns>CurrentTime</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IStatusApi.GetApiStatusTimeWithHttpInfo">
+        <member name="M:Org.Vitrivr.DresApi.Api.IStatusApi.GetApiV1StatusTimeWithHttpInfo">
              <summary>
              Returns the current time on the server.
              </summary>
@@ -1480,7 +1480,7 @@
              <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
              <returns>ApiResponse of CurrentTime</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IStatusApi.GetApiStatusTimeAsync">
+        <member name="M:Org.Vitrivr.DresApi.Api.IStatusApi.GetApiV1StatusTimeAsync">
              <summary>
              Returns the current time on the server.
              </summary>
@@ -1490,7 +1490,7 @@
              <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
              <returns>Task of CurrentTime</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IStatusApi.GetApiStatusTimeAsyncWithHttpInfo">
+        <member name="M:Org.Vitrivr.DresApi.Api.IStatusApi.GetApiV1StatusTimeAsyncWithHttpInfo">
              <summary>
              Returns the current time on the server.
              </summary>
@@ -1562,28 +1562,28 @@
              <param name="value">Header field value.</param>
              <returns></returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.StatusApi.GetApiStatusTime">
+        <member name="M:Org.Vitrivr.DresApi.Api.StatusApi.GetApiV1StatusTime">
              <summary>
              Returns the current time on the server. 
              </summary>
              <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
              <returns>CurrentTime</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.StatusApi.GetApiStatusTimeWithHttpInfo">
+        <member name="M:Org.Vitrivr.DresApi.Api.StatusApi.GetApiV1StatusTimeWithHttpInfo">
              <summary>
              Returns the current time on the server. 
              </summary>
              <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
              <returns>ApiResponse of CurrentTime</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.StatusApi.GetApiStatusTimeAsync">
+        <member name="M:Org.Vitrivr.DresApi.Api.StatusApi.GetApiV1StatusTimeAsync">
              <summary>
              Returns the current time on the server. 
              </summary>
              <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
              <returns>Task of CurrentTime</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.StatusApi.GetApiStatusTimeAsyncWithHttpInfo">
+        <member name="M:Org.Vitrivr.DresApi.Api.StatusApi.GetApiV1StatusTimeAsyncWithHttpInfo">
              <summary>
              Returns the current time on the server. 
              </summary>
@@ -1595,7 +1595,7 @@
              Represents a collection of functions to interact with the API endpoints
              </summary>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.ISubmissionApi.GetSubmit(System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.ISubmissionApi.GetApiV1Submit(System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
              <summary>
              Endpoint to accept submissions
              </summary>
@@ -1611,7 +1611,7 @@
              <param name="session">Session Token (optional)</param>
              <returns>SuccessfulSubmissionsStatus</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.ISubmissionApi.GetSubmitWithHttpInfo(System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.ISubmissionApi.GetApiV1SubmitWithHttpInfo(System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
              <summary>
              Endpoint to accept submissions
              </summary>
@@ -1627,7 +1627,7 @@
              <param name="session">Session Token (optional)</param>
              <returns>ApiResponse of SuccessfulSubmissionsStatus</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.ISubmissionApi.GetSubmitAsync(System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.ISubmissionApi.GetApiV1SubmitAsync(System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
              <summary>
              Endpoint to accept submissions
              </summary>
@@ -1643,7 +1643,7 @@
              <param name="session">Session Token (optional)</param>
              <returns>Task of SuccessfulSubmissionsStatus</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.ISubmissionApi.GetSubmitAsyncWithHttpInfo(System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.ISubmissionApi.GetApiV1SubmitAsyncWithHttpInfo(System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
              <summary>
              Endpoint to accept submissions
              </summary>
@@ -1721,7 +1721,7 @@
              <param name="value">Header field value.</param>
              <returns></returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.SubmissionApi.GetSubmit(System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.SubmissionApi.GetApiV1Submit(System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
              <summary>
              Endpoint to accept submissions 
              </summary>
@@ -1734,7 +1734,7 @@
              <param name="session">Session Token (optional)</param>
              <returns>SuccessfulSubmissionsStatus</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.SubmissionApi.GetSubmitWithHttpInfo(System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.SubmissionApi.GetApiV1SubmitWithHttpInfo(System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
              <summary>
              Endpoint to accept submissions 
              </summary>
@@ -1747,7 +1747,7 @@
              <param name="session">Session Token (optional)</param>
              <returns>ApiResponse of SuccessfulSubmissionsStatus</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.SubmissionApi.GetSubmitAsync(System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.SubmissionApi.GetApiV1SubmitAsync(System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
              <summary>
              Endpoint to accept submissions 
              </summary>
@@ -1760,7 +1760,7 @@
              <param name="session">Session Token (optional)</param>
              <returns>Task of SuccessfulSubmissionsStatus</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.SubmissionApi.GetSubmitAsyncWithHttpInfo(System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.SubmissionApi.GetApiV1SubmitAsyncWithHttpInfo(System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
              <summary>
              Endpoint to accept submissions 
              </summary>
@@ -1778,7 +1778,7 @@
              Represents a collection of functions to interact with the API endpoints
              </summary>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.ILogApi.PostLogQuery(System.String,Org.Vitrivr.DresApi.Model.QueryEventLog)">
+        <member name="M:Org.Vitrivr.DresApi.Api.ILogApi.PostApiV1LogQuery(System.String,Org.Vitrivr.DresApi.Model.QueryEventLog)">
              <summary>
              Accepts query logs from participants
              </summary>
@@ -1790,7 +1790,7 @@
              <param name="queryEventLog"> (optional)</param>
              <returns>SuccessStatus</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.ILogApi.PostLogQueryWithHttpInfo(System.String,Org.Vitrivr.DresApi.Model.QueryEventLog)">
+        <member name="M:Org.Vitrivr.DresApi.Api.ILogApi.PostApiV1LogQueryWithHttpInfo(System.String,Org.Vitrivr.DresApi.Model.QueryEventLog)">
              <summary>
              Accepts query logs from participants
              </summary>
@@ -1802,7 +1802,7 @@
              <param name="queryEventLog"> (optional)</param>
              <returns>ApiResponse of SuccessStatus</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.ILogApi.PostLogResult(System.String,Org.Vitrivr.DresApi.Model.QueryResultLog)">
+        <member name="M:Org.Vitrivr.DresApi.Api.ILogApi.PostApiV1LogResult(System.String,Org.Vitrivr.DresApi.Model.QueryResultLog)">
              <summary>
              Accepts result logs from participants
              </summary>
@@ -1814,7 +1814,7 @@
              <param name="queryResultLog"> (optional)</param>
              <returns>SuccessStatus</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.ILogApi.PostLogResultWithHttpInfo(System.String,Org.Vitrivr.DresApi.Model.QueryResultLog)">
+        <member name="M:Org.Vitrivr.DresApi.Api.ILogApi.PostApiV1LogResultWithHttpInfo(System.String,Org.Vitrivr.DresApi.Model.QueryResultLog)">
              <summary>
              Accepts result logs from participants
              </summary>
@@ -1826,7 +1826,7 @@
              <param name="queryResultLog"> (optional)</param>
              <returns>ApiResponse of SuccessStatus</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.ILogApi.PostLogQueryAsync(System.String,Org.Vitrivr.DresApi.Model.QueryEventLog)">
+        <member name="M:Org.Vitrivr.DresApi.Api.ILogApi.PostApiV1LogQueryAsync(System.String,Org.Vitrivr.DresApi.Model.QueryEventLog)">
              <summary>
              Accepts query logs from participants
              </summary>
@@ -1838,7 +1838,7 @@
              <param name="queryEventLog"> (optional)</param>
              <returns>Task of SuccessStatus</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.ILogApi.PostLogQueryAsyncWithHttpInfo(System.String,Org.Vitrivr.DresApi.Model.QueryEventLog)">
+        <member name="M:Org.Vitrivr.DresApi.Api.ILogApi.PostApiV1LogQueryAsyncWithHttpInfo(System.String,Org.Vitrivr.DresApi.Model.QueryEventLog)">
              <summary>
              Accepts query logs from participants
              </summary>
@@ -1850,7 +1850,7 @@
              <param name="queryEventLog"> (optional)</param>
              <returns>Task of ApiResponse (SuccessStatus)</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.ILogApi.PostLogResultAsync(System.String,Org.Vitrivr.DresApi.Model.QueryResultLog)">
+        <member name="M:Org.Vitrivr.DresApi.Api.ILogApi.PostApiV1LogResultAsync(System.String,Org.Vitrivr.DresApi.Model.QueryResultLog)">
              <summary>
              Accepts result logs from participants
              </summary>
@@ -1862,7 +1862,7 @@
              <param name="queryResultLog"> (optional)</param>
              <returns>Task of SuccessStatus</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.ILogApi.PostLogResultAsyncWithHttpInfo(System.String,Org.Vitrivr.DresApi.Model.QueryResultLog)">
+        <member name="M:Org.Vitrivr.DresApi.Api.ILogApi.PostApiV1LogResultAsyncWithHttpInfo(System.String,Org.Vitrivr.DresApi.Model.QueryResultLog)">
              <summary>
              Accepts result logs from participants
              </summary>
@@ -1936,7 +1936,7 @@
              <param name="value">Header field value.</param>
              <returns></returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.LogApi.PostLogQuery(System.String,Org.Vitrivr.DresApi.Model.QueryEventLog)">
+        <member name="M:Org.Vitrivr.DresApi.Api.LogApi.PostApiV1LogQuery(System.String,Org.Vitrivr.DresApi.Model.QueryEventLog)">
              <summary>
              Accepts query logs from participants 
              </summary>
@@ -1945,7 +1945,7 @@
              <param name="queryEventLog"> (optional)</param>
              <returns>SuccessStatus</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.LogApi.PostLogQueryWithHttpInfo(System.String,Org.Vitrivr.DresApi.Model.QueryEventLog)">
+        <member name="M:Org.Vitrivr.DresApi.Api.LogApi.PostApiV1LogQueryWithHttpInfo(System.String,Org.Vitrivr.DresApi.Model.QueryEventLog)">
              <summary>
              Accepts query logs from participants 
              </summary>
@@ -1954,7 +1954,7 @@
              <param name="queryEventLog"> (optional)</param>
              <returns>ApiResponse of SuccessStatus</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.LogApi.PostLogQueryAsync(System.String,Org.Vitrivr.DresApi.Model.QueryEventLog)">
+        <member name="M:Org.Vitrivr.DresApi.Api.LogApi.PostApiV1LogQueryAsync(System.String,Org.Vitrivr.DresApi.Model.QueryEventLog)">
              <summary>
              Accepts query logs from participants 
              </summary>
@@ -1963,7 +1963,7 @@
              <param name="queryEventLog"> (optional)</param>
              <returns>Task of SuccessStatus</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.LogApi.PostLogQueryAsyncWithHttpInfo(System.String,Org.Vitrivr.DresApi.Model.QueryEventLog)">
+        <member name="M:Org.Vitrivr.DresApi.Api.LogApi.PostApiV1LogQueryAsyncWithHttpInfo(System.String,Org.Vitrivr.DresApi.Model.QueryEventLog)">
              <summary>
              Accepts query logs from participants 
              </summary>
@@ -1972,7 +1972,7 @@
              <param name="queryEventLog"> (optional)</param>
              <returns>Task of ApiResponse (SuccessStatus)</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.LogApi.PostLogResult(System.String,Org.Vitrivr.DresApi.Model.QueryResultLog)">
+        <member name="M:Org.Vitrivr.DresApi.Api.LogApi.PostApiV1LogResult(System.String,Org.Vitrivr.DresApi.Model.QueryResultLog)">
              <summary>
              Accepts result logs from participants 
              </summary>
@@ -1981,7 +1981,7 @@
              <param name="queryResultLog"> (optional)</param>
              <returns>SuccessStatus</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.LogApi.PostLogResultWithHttpInfo(System.String,Org.Vitrivr.DresApi.Model.QueryResultLog)">
+        <member name="M:Org.Vitrivr.DresApi.Api.LogApi.PostApiV1LogResultWithHttpInfo(System.String,Org.Vitrivr.DresApi.Model.QueryResultLog)">
              <summary>
              Accepts result logs from participants 
              </summary>
@@ -1990,7 +1990,7 @@
              <param name="queryResultLog"> (optional)</param>
              <returns>ApiResponse of SuccessStatus</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.LogApi.PostLogResultAsync(System.String,Org.Vitrivr.DresApi.Model.QueryResultLog)">
+        <member name="M:Org.Vitrivr.DresApi.Api.LogApi.PostApiV1LogResultAsync(System.String,Org.Vitrivr.DresApi.Model.QueryResultLog)">
              <summary>
              Accepts result logs from participants 
              </summary>
@@ -1999,7 +1999,7 @@
              <param name="queryResultLog"> (optional)</param>
              <returns>Task of SuccessStatus</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.LogApi.PostLogResultAsyncWithHttpInfo(System.String,Org.Vitrivr.DresApi.Model.QueryResultLog)">
+        <member name="M:Org.Vitrivr.DresApi.Api.LogApi.PostApiV1LogResultAsyncWithHttpInfo(System.String,Org.Vitrivr.DresApi.Model.QueryResultLog)">
              <summary>
              Accepts result logs from participants 
              </summary>
@@ -2013,7 +2013,7 @@
              Represents a collection of functions to interact with the API endpoints
              </summary>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.DeleteApiUserWithUserid(System.Int64)">
+        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.DeleteApiV1UserWithUserid(System.Int64)">
              <summary>
              Deletes the specified user. Requires ADMIN privileges
              </summary>
@@ -2024,7 +2024,7 @@
              <param name="userId">User ID</param>
              <returns>UserDetails</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.DeleteApiUserWithUseridWithHttpInfo(System.Int64)">
+        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.DeleteApiV1UserWithUseridWithHttpInfo(System.Int64)">
              <summary>
              Deletes the specified user. Requires ADMIN privileges
              </summary>
@@ -2035,7 +2035,7 @@
              <param name="userId">User ID</param>
              <returns>ApiResponse of UserDetails</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.GetApiLogout(System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.GetApiV1Logout(System.String)">
              <summary>
              Clears all user roles of the current session.
              </summary>
@@ -2046,7 +2046,7 @@
              <param name="session">Session Token (optional)</param>
              <returns>SuccessStatus</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.GetApiLogoutWithHttpInfo(System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.GetApiV1LogoutWithHttpInfo(System.String)">
              <summary>
              Clears all user roles of the current session.
              </summary>
@@ -2057,7 +2057,27 @@
              <param name="session">Session Token (optional)</param>
              <returns>ApiResponse of SuccessStatus</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.GetApiUserSession(System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.GetApiV1User">
+             <summary>
+             Get information about the current user.
+             </summary>
+             <remarks>
+             
+             </remarks>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <returns>UserDetails</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.GetApiV1UserWithHttpInfo">
+             <summary>
+             Get information about the current user.
+             </summary>
+             <remarks>
+             
+             </remarks>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <returns>ApiResponse of UserDetails</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.GetApiV1UserSession(System.String)">
              <summary>
              Get current sessionId
              </summary>
@@ -2068,7 +2088,7 @@
              <param name="session">Session Token (optional)</param>
              <returns>SessionId</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.GetApiUserSessionWithHttpInfo(System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.GetApiV1UserSessionWithHttpInfo(System.String)">
              <summary>
              Get current sessionId
              </summary>
@@ -2079,7 +2099,7 @@
              <param name="session">Session Token (optional)</param>
              <returns>ApiResponse of SessionId</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.GetApiUserWithUserid(System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.GetApiV1UserWithUserid(System.String)">
              <summary>
              Gets details of the user with the given id
              </summary>
@@ -2090,7 +2110,7 @@
              <param name="userId">User's UID</param>
              <returns>UserDetails</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.GetApiUserWithUseridWithHttpInfo(System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.GetApiV1UserWithUseridWithHttpInfo(System.String)">
              <summary>
              Gets details of the user with the given id
              </summary>
@@ -2101,7 +2121,7 @@
              <param name="userId">User's UID</param>
              <returns>ApiResponse of UserDetails</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.PatchApiUserWithUserid(System.String,Org.Vitrivr.DresApi.Model.UserRequest)">
+        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.PatchApiV1UserWithUserid(System.String,Org.Vitrivr.DresApi.Model.UserRequest)">
              <summary>
              Updates the specified user, if it exists. Anyone is allowed to update their data, however only ADMINs are allowed to update anyone
              </summary>
@@ -2113,7 +2133,7 @@
              <param name="userRequest"> (optional)</param>
              <returns>UserDetails</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.PatchApiUserWithUseridWithHttpInfo(System.String,Org.Vitrivr.DresApi.Model.UserRequest)">
+        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.PatchApiV1UserWithUseridWithHttpInfo(System.String,Org.Vitrivr.DresApi.Model.UserRequest)">
              <summary>
              Updates the specified user, if it exists. Anyone is allowed to update their data, however only ADMINs are allowed to update anyone
              </summary>
@@ -2125,7 +2145,7 @@
              <param name="userRequest"> (optional)</param>
              <returns>ApiResponse of UserDetails</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.PostApiLogin(Org.Vitrivr.DresApi.Model.LoginRequest)">
+        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.PostApiV1Login(Org.Vitrivr.DresApi.Model.LoginRequest)">
              <summary>
              Sets roles for session based on user account and returns a session cookie.
              </summary>
@@ -2136,7 +2156,7 @@
              <param name="loginRequest"> (optional)</param>
              <returns>UserDetails</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.PostApiLoginWithHttpInfo(Org.Vitrivr.DresApi.Model.LoginRequest)">
+        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.PostApiV1LoginWithHttpInfo(Org.Vitrivr.DresApi.Model.LoginRequest)">
              <summary>
              Sets roles for session based on user account and returns a session cookie.
              </summary>
@@ -2147,7 +2167,29 @@
              <param name="loginRequest"> (optional)</param>
              <returns>ApiResponse of UserDetails</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.DeleteApiUserWithUseridAsync(System.Int64)">
+        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.PostApiV1User(Org.Vitrivr.DresApi.Model.UserRequest)">
+             <summary>
+             Creates a new user, if the username is not already taken. Requires ADMIN privileges
+             </summary>
+             <remarks>
+             
+             </remarks>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="userRequest"> (optional)</param>
+             <returns>UserDetails</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.PostApiV1UserWithHttpInfo(Org.Vitrivr.DresApi.Model.UserRequest)">
+             <summary>
+             Creates a new user, if the username is not already taken. Requires ADMIN privileges
+             </summary>
+             <remarks>
+             
+             </remarks>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="userRequest"> (optional)</param>
+             <returns>ApiResponse of UserDetails</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.DeleteApiV1UserWithUseridAsync(System.Int64)">
              <summary>
              Deletes the specified user. Requires ADMIN privileges
              </summary>
@@ -2158,7 +2200,7 @@
              <param name="userId">User ID</param>
              <returns>Task of UserDetails</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.DeleteApiUserWithUseridAsyncWithHttpInfo(System.Int64)">
+        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.DeleteApiV1UserWithUseridAsyncWithHttpInfo(System.Int64)">
              <summary>
              Deletes the specified user. Requires ADMIN privileges
              </summary>
@@ -2169,7 +2211,7 @@
              <param name="userId">User ID</param>
              <returns>Task of ApiResponse (UserDetails)</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.GetApiLogoutAsync(System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.GetApiV1LogoutAsync(System.String)">
              <summary>
              Clears all user roles of the current session.
              </summary>
@@ -2180,7 +2222,7 @@
              <param name="session">Session Token (optional)</param>
              <returns>Task of SuccessStatus</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.GetApiLogoutAsyncWithHttpInfo(System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.GetApiV1LogoutAsyncWithHttpInfo(System.String)">
              <summary>
              Clears all user roles of the current session.
              </summary>
@@ -2191,7 +2233,27 @@
              <param name="session">Session Token (optional)</param>
              <returns>Task of ApiResponse (SuccessStatus)</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.GetApiUserSessionAsync(System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.GetApiV1UserAsync">
+             <summary>
+             Get information about the current user.
+             </summary>
+             <remarks>
+             
+             </remarks>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <returns>Task of UserDetails</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.GetApiV1UserAsyncWithHttpInfo">
+             <summary>
+             Get information about the current user.
+             </summary>
+             <remarks>
+             
+             </remarks>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <returns>Task of ApiResponse (UserDetails)</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.GetApiV1UserSessionAsync(System.String)">
              <summary>
              Get current sessionId
              </summary>
@@ -2202,7 +2264,7 @@
              <param name="session">Session Token (optional)</param>
              <returns>Task of SessionId</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.GetApiUserSessionAsyncWithHttpInfo(System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.GetApiV1UserSessionAsyncWithHttpInfo(System.String)">
              <summary>
              Get current sessionId
              </summary>
@@ -2213,7 +2275,7 @@
              <param name="session">Session Token (optional)</param>
              <returns>Task of ApiResponse (SessionId)</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.GetApiUserWithUseridAsync(System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.GetApiV1UserWithUseridAsync(System.String)">
              <summary>
              Gets details of the user with the given id
              </summary>
@@ -2224,7 +2286,7 @@
              <param name="userId">User's UID</param>
              <returns>Task of UserDetails</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.GetApiUserWithUseridAsyncWithHttpInfo(System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.GetApiV1UserWithUseridAsyncWithHttpInfo(System.String)">
              <summary>
              Gets details of the user with the given id
              </summary>
@@ -2235,7 +2297,7 @@
              <param name="userId">User's UID</param>
              <returns>Task of ApiResponse (UserDetails)</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.PatchApiUserWithUseridAsync(System.String,Org.Vitrivr.DresApi.Model.UserRequest)">
+        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.PatchApiV1UserWithUseridAsync(System.String,Org.Vitrivr.DresApi.Model.UserRequest)">
              <summary>
              Updates the specified user, if it exists. Anyone is allowed to update their data, however only ADMINs are allowed to update anyone
              </summary>
@@ -2247,7 +2309,7 @@
              <param name="userRequest"> (optional)</param>
              <returns>Task of UserDetails</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.PatchApiUserWithUseridAsyncWithHttpInfo(System.String,Org.Vitrivr.DresApi.Model.UserRequest)">
+        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.PatchApiV1UserWithUseridAsyncWithHttpInfo(System.String,Org.Vitrivr.DresApi.Model.UserRequest)">
              <summary>
              Updates the specified user, if it exists. Anyone is allowed to update their data, however only ADMINs are allowed to update anyone
              </summary>
@@ -2259,7 +2321,7 @@
              <param name="userRequest"> (optional)</param>
              <returns>Task of ApiResponse (UserDetails)</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.PostApiLoginAsync(Org.Vitrivr.DresApi.Model.LoginRequest)">
+        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.PostApiV1LoginAsync(Org.Vitrivr.DresApi.Model.LoginRequest)">
              <summary>
              Sets roles for session based on user account and returns a session cookie.
              </summary>
@@ -2270,7 +2332,7 @@
              <param name="loginRequest"> (optional)</param>
              <returns>Task of UserDetails</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.PostApiLoginAsyncWithHttpInfo(Org.Vitrivr.DresApi.Model.LoginRequest)">
+        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.PostApiV1LoginAsyncWithHttpInfo(Org.Vitrivr.DresApi.Model.LoginRequest)">
              <summary>
              Sets roles for session based on user account and returns a session cookie.
              </summary>
@@ -2279,6 +2341,28 @@
              </remarks>
              <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
              <param name="loginRequest"> (optional)</param>
+             <returns>Task of ApiResponse (UserDetails)</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.PostApiV1UserAsync(Org.Vitrivr.DresApi.Model.UserRequest)">
+             <summary>
+             Creates a new user, if the username is not already taken. Requires ADMIN privileges
+             </summary>
+             <remarks>
+             
+             </remarks>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="userRequest"> (optional)</param>
+             <returns>Task of UserDetails</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.IUserApi.PostApiV1UserAsyncWithHttpInfo(Org.Vitrivr.DresApi.Model.UserRequest)">
+             <summary>
+             Creates a new user, if the username is not already taken. Requires ADMIN privileges
+             </summary>
+             <remarks>
+             
+             </remarks>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="userRequest"> (optional)</param>
              <returns>Task of ApiResponse (UserDetails)</returns>
             </member>
         <member name="T:Org.Vitrivr.DresApi.Api.UserApi">
@@ -2343,7 +2427,7 @@
              <param name="value">Header field value.</param>
              <returns></returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.DeleteApiUserWithUserid(System.Int64)">
+        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.DeleteApiV1UserWithUserid(System.Int64)">
              <summary>
              Deletes the specified user. Requires ADMIN privileges 
              </summary>
@@ -2351,7 +2435,7 @@
              <param name="userId">User ID</param>
              <returns>UserDetails</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.DeleteApiUserWithUseridWithHttpInfo(System.Int64)">
+        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.DeleteApiV1UserWithUseridWithHttpInfo(System.Int64)">
              <summary>
              Deletes the specified user. Requires ADMIN privileges 
              </summary>
@@ -2359,7 +2443,7 @@
              <param name="userId">User ID</param>
              <returns>ApiResponse of UserDetails</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.DeleteApiUserWithUseridAsync(System.Int64)">
+        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.DeleteApiV1UserWithUseridAsync(System.Int64)">
              <summary>
              Deletes the specified user. Requires ADMIN privileges 
              </summary>
@@ -2367,7 +2451,7 @@
              <param name="userId">User ID</param>
              <returns>Task of UserDetails</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.DeleteApiUserWithUseridAsyncWithHttpInfo(System.Int64)">
+        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.DeleteApiV1UserWithUseridAsyncWithHttpInfo(System.Int64)">
              <summary>
              Deletes the specified user. Requires ADMIN privileges 
              </summary>
@@ -2375,7 +2459,7 @@
              <param name="userId">User ID</param>
              <returns>Task of ApiResponse (UserDetails)</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.GetApiLogout(System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.GetApiV1Logout(System.String)">
              <summary>
              Clears all user roles of the current session. 
              </summary>
@@ -2383,7 +2467,7 @@
              <param name="session">Session Token (optional)</param>
              <returns>SuccessStatus</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.GetApiLogoutWithHttpInfo(System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.GetApiV1LogoutWithHttpInfo(System.String)">
              <summary>
              Clears all user roles of the current session. 
              </summary>
@@ -2391,7 +2475,7 @@
              <param name="session">Session Token (optional)</param>
              <returns>ApiResponse of SuccessStatus</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.GetApiLogoutAsync(System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.GetApiV1LogoutAsync(System.String)">
              <summary>
              Clears all user roles of the current session. 
              </summary>
@@ -2399,7 +2483,7 @@
              <param name="session">Session Token (optional)</param>
              <returns>Task of SuccessStatus</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.GetApiLogoutAsyncWithHttpInfo(System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.GetApiV1LogoutAsyncWithHttpInfo(System.String)">
              <summary>
              Clears all user roles of the current session. 
              </summary>
@@ -2407,7 +2491,35 @@
              <param name="session">Session Token (optional)</param>
              <returns>Task of ApiResponse (SuccessStatus)</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.GetApiUserSession(System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.GetApiV1User">
+             <summary>
+             Get information about the current user. 
+             </summary>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <returns>UserDetails</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.GetApiV1UserWithHttpInfo">
+             <summary>
+             Get information about the current user. 
+             </summary>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <returns>ApiResponse of UserDetails</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.GetApiV1UserAsync">
+             <summary>
+             Get information about the current user. 
+             </summary>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <returns>Task of UserDetails</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.GetApiV1UserAsyncWithHttpInfo">
+             <summary>
+             Get information about the current user. 
+             </summary>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <returns>Task of ApiResponse (UserDetails)</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.GetApiV1UserSession(System.String)">
              <summary>
              Get current sessionId 
              </summary>
@@ -2415,7 +2527,7 @@
              <param name="session">Session Token (optional)</param>
              <returns>SessionId</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.GetApiUserSessionWithHttpInfo(System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.GetApiV1UserSessionWithHttpInfo(System.String)">
              <summary>
              Get current sessionId 
              </summary>
@@ -2423,7 +2535,7 @@
              <param name="session">Session Token (optional)</param>
              <returns>ApiResponse of SessionId</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.GetApiUserSessionAsync(System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.GetApiV1UserSessionAsync(System.String)">
              <summary>
              Get current sessionId 
              </summary>
@@ -2431,7 +2543,7 @@
              <param name="session">Session Token (optional)</param>
              <returns>Task of SessionId</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.GetApiUserSessionAsyncWithHttpInfo(System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.GetApiV1UserSessionAsyncWithHttpInfo(System.String)">
              <summary>
              Get current sessionId 
              </summary>
@@ -2439,7 +2551,7 @@
              <param name="session">Session Token (optional)</param>
              <returns>Task of ApiResponse (SessionId)</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.GetApiUserWithUserid(System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.GetApiV1UserWithUserid(System.String)">
              <summary>
              Gets details of the user with the given id 
              </summary>
@@ -2447,7 +2559,7 @@
              <param name="userId">User's UID</param>
              <returns>UserDetails</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.GetApiUserWithUseridWithHttpInfo(System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.GetApiV1UserWithUseridWithHttpInfo(System.String)">
              <summary>
              Gets details of the user with the given id 
              </summary>
@@ -2455,7 +2567,7 @@
              <param name="userId">User's UID</param>
              <returns>ApiResponse of UserDetails</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.GetApiUserWithUseridAsync(System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.GetApiV1UserWithUseridAsync(System.String)">
              <summary>
              Gets details of the user with the given id 
              </summary>
@@ -2463,7 +2575,7 @@
              <param name="userId">User's UID</param>
              <returns>Task of UserDetails</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.GetApiUserWithUseridAsyncWithHttpInfo(System.String)">
+        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.GetApiV1UserWithUseridAsyncWithHttpInfo(System.String)">
              <summary>
              Gets details of the user with the given id 
              </summary>
@@ -2471,7 +2583,7 @@
              <param name="userId">User's UID</param>
              <returns>Task of ApiResponse (UserDetails)</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.PatchApiUserWithUserid(System.String,Org.Vitrivr.DresApi.Model.UserRequest)">
+        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.PatchApiV1UserWithUserid(System.String,Org.Vitrivr.DresApi.Model.UserRequest)">
              <summary>
              Updates the specified user, if it exists. Anyone is allowed to update their data, however only ADMINs are allowed to update anyone 
              </summary>
@@ -2480,7 +2592,7 @@
              <param name="userRequest"> (optional)</param>
              <returns>UserDetails</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.PatchApiUserWithUseridWithHttpInfo(System.String,Org.Vitrivr.DresApi.Model.UserRequest)">
+        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.PatchApiV1UserWithUseridWithHttpInfo(System.String,Org.Vitrivr.DresApi.Model.UserRequest)">
              <summary>
              Updates the specified user, if it exists. Anyone is allowed to update their data, however only ADMINs are allowed to update anyone 
              </summary>
@@ -2489,7 +2601,7 @@
              <param name="userRequest"> (optional)</param>
              <returns>ApiResponse of UserDetails</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.PatchApiUserWithUseridAsync(System.String,Org.Vitrivr.DresApi.Model.UserRequest)">
+        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.PatchApiV1UserWithUseridAsync(System.String,Org.Vitrivr.DresApi.Model.UserRequest)">
              <summary>
              Updates the specified user, if it exists. Anyone is allowed to update their data, however only ADMINs are allowed to update anyone 
              </summary>
@@ -2498,7 +2610,7 @@
              <param name="userRequest"> (optional)</param>
              <returns>Task of UserDetails</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.PatchApiUserWithUseridAsyncWithHttpInfo(System.String,Org.Vitrivr.DresApi.Model.UserRequest)">
+        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.PatchApiV1UserWithUseridAsyncWithHttpInfo(System.String,Org.Vitrivr.DresApi.Model.UserRequest)">
              <summary>
              Updates the specified user, if it exists. Anyone is allowed to update their data, however only ADMINs are allowed to update anyone 
              </summary>
@@ -2507,7 +2619,7 @@
              <param name="userRequest"> (optional)</param>
              <returns>Task of ApiResponse (UserDetails)</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.PostApiLogin(Org.Vitrivr.DresApi.Model.LoginRequest)">
+        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.PostApiV1Login(Org.Vitrivr.DresApi.Model.LoginRequest)">
              <summary>
              Sets roles for session based on user account and returns a session cookie. 
              </summary>
@@ -2515,7 +2627,7 @@
              <param name="loginRequest"> (optional)</param>
              <returns>UserDetails</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.PostApiLoginWithHttpInfo(Org.Vitrivr.DresApi.Model.LoginRequest)">
+        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.PostApiV1LoginWithHttpInfo(Org.Vitrivr.DresApi.Model.LoginRequest)">
              <summary>
              Sets roles for session based on user account and returns a session cookie. 
              </summary>
@@ -2523,7 +2635,7 @@
              <param name="loginRequest"> (optional)</param>
              <returns>ApiResponse of UserDetails</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.PostApiLoginAsync(Org.Vitrivr.DresApi.Model.LoginRequest)">
+        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.PostApiV1LoginAsync(Org.Vitrivr.DresApi.Model.LoginRequest)">
              <summary>
              Sets roles for session based on user account and returns a session cookie. 
              </summary>
@@ -2531,13 +2643,340 @@
              <param name="loginRequest"> (optional)</param>
              <returns>Task of UserDetails</returns>
             </member>
-        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.PostApiLoginAsyncWithHttpInfo(Org.Vitrivr.DresApi.Model.LoginRequest)">
+        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.PostApiV1LoginAsyncWithHttpInfo(Org.Vitrivr.DresApi.Model.LoginRequest)">
              <summary>
              Sets roles for session based on user account and returns a session cookie. 
              </summary>
              <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
              <param name="loginRequest"> (optional)</param>
              <returns>Task of ApiResponse (UserDetails)</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.PostApiV1User(Org.Vitrivr.DresApi.Model.UserRequest)">
+             <summary>
+             Creates a new user, if the username is not already taken. Requires ADMIN privileges 
+             </summary>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="userRequest"> (optional)</param>
+             <returns>UserDetails</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.PostApiV1UserWithHttpInfo(Org.Vitrivr.DresApi.Model.UserRequest)">
+             <summary>
+             Creates a new user, if the username is not already taken. Requires ADMIN privileges 
+             </summary>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="userRequest"> (optional)</param>
+             <returns>ApiResponse of UserDetails</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.PostApiV1UserAsync(Org.Vitrivr.DresApi.Model.UserRequest)">
+             <summary>
+             Creates a new user, if the username is not already taken. Requires ADMIN privileges 
+             </summary>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="userRequest"> (optional)</param>
+             <returns>Task of UserDetails</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.UserApi.PostApiV1UserAsyncWithHttpInfo(Org.Vitrivr.DresApi.Model.UserRequest)">
+             <summary>
+             Creates a new user, if the username is not already taken. Requires ADMIN privileges 
+             </summary>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="userRequest"> (optional)</param>
+             <returns>Task of ApiResponse (UserDetails)</returns>
+            </member>
+        <member name="T:Org.Vitrivr.DresApi.Api.IDownloadApi">
+             <summary>
+             Represents a collection of functions to interact with the API endpoints
+             </summary>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.IDownloadApi.GetApiV1DownloadCompetitionWithCompetitionid(System.String)">
+             <summary>
+             Provides a JSON download of the entire competition description structure.
+             </summary>
+             <remarks>
+             
+             </remarks>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="competitionId">Competition ID</param>
+             <returns>string</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.IDownloadApi.GetApiV1DownloadCompetitionWithCompetitionidWithHttpInfo(System.String)">
+             <summary>
+             Provides a JSON download of the entire competition description structure.
+             </summary>
+             <remarks>
+             
+             </remarks>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="competitionId">Competition ID</param>
+             <returns>ApiResponse of string</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.IDownloadApi.GetApiV1DownloadRunWithRunid(System.String)">
+             <summary>
+             Provides a JSON download of the entire competition run structure.
+             </summary>
+             <remarks>
+             
+             </remarks>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="runId">Competition run ID</param>
+             <returns>string</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.IDownloadApi.GetApiV1DownloadRunWithRunidWithHttpInfo(System.String)">
+             <summary>
+             Provides a JSON download of the entire competition run structure.
+             </summary>
+             <remarks>
+             
+             </remarks>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="runId">Competition run ID</param>
+             <returns>ApiResponse of string</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.IDownloadApi.GetApiV1DownloadRunWithRunidScores(System.String)">
+             <summary>
+             Provides a CSV download with the scores for a given competition run.
+             </summary>
+             <remarks>
+             
+             </remarks>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="runId">Competition run ID</param>
+             <returns>string</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.IDownloadApi.GetApiV1DownloadRunWithRunidScoresWithHttpInfo(System.String)">
+             <summary>
+             Provides a CSV download with the scores for a given competition run.
+             </summary>
+             <remarks>
+             
+             </remarks>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="runId">Competition run ID</param>
+             <returns>ApiResponse of string</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.IDownloadApi.GetApiV1DownloadCompetitionWithCompetitionidAsync(System.String)">
+             <summary>
+             Provides a JSON download of the entire competition description structure.
+             </summary>
+             <remarks>
+             
+             </remarks>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="competitionId">Competition ID</param>
+             <returns>Task of string</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.IDownloadApi.GetApiV1DownloadCompetitionWithCompetitionidAsyncWithHttpInfo(System.String)">
+             <summary>
+             Provides a JSON download of the entire competition description structure.
+             </summary>
+             <remarks>
+             
+             </remarks>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="competitionId">Competition ID</param>
+             <returns>Task of ApiResponse (string)</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.IDownloadApi.GetApiV1DownloadRunWithRunidAsync(System.String)">
+             <summary>
+             Provides a JSON download of the entire competition run structure.
+             </summary>
+             <remarks>
+             
+             </remarks>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="runId">Competition run ID</param>
+             <returns>Task of string</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.IDownloadApi.GetApiV1DownloadRunWithRunidAsyncWithHttpInfo(System.String)">
+             <summary>
+             Provides a JSON download of the entire competition run structure.
+             </summary>
+             <remarks>
+             
+             </remarks>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="runId">Competition run ID</param>
+             <returns>Task of ApiResponse (string)</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.IDownloadApi.GetApiV1DownloadRunWithRunidScoresAsync(System.String)">
+             <summary>
+             Provides a CSV download with the scores for a given competition run.
+             </summary>
+             <remarks>
+             
+             </remarks>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="runId">Competition run ID</param>
+             <returns>Task of string</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.IDownloadApi.GetApiV1DownloadRunWithRunidScoresAsyncWithHttpInfo(System.String)">
+             <summary>
+             Provides a CSV download with the scores for a given competition run.
+             </summary>
+             <remarks>
+             
+             </remarks>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="runId">Competition run ID</param>
+             <returns>Task of ApiResponse (string)</returns>
+            </member>
+        <member name="T:Org.Vitrivr.DresApi.Api.DownloadApi">
+             <summary>
+             Represents a collection of functions to interact with the API endpoints
+             </summary>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.DownloadApi.#ctor(System.String)">
+             <summary>
+             Initializes a new instance of the <see cref="T:Org.Vitrivr.DresApi.Api.DownloadApi" /> class.
+             </summary>
+             <returns></returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.DownloadApi.#ctor">
+             <summary>
+             Initializes a new instance of the <see cref="T:Org.Vitrivr.DresApi.Api.DownloadApi" /> class
+             </summary>
+             <returns></returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.DownloadApi.#ctor(Org.Vitrivr.DresApi.Client.Configuration)">
+             <summary>
+             Initializes a new instance of the <see cref="T:Org.Vitrivr.DresApi.Api.DownloadApi" /> class
+             using Configuration object
+             </summary>
+             <param name="configuration">An instance of Configuration</param>
+             <returns></returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.DownloadApi.GetBasePath">
+             <summary>
+             Gets the base path of the API client.
+             </summary>
+             <value>The base path</value>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.DownloadApi.SetBasePath(System.String)">
+             <summary>
+             Sets the base path of the API client.
+             </summary>
+             <value>The base path</value>
+            </member>
+        <member name="P:Org.Vitrivr.DresApi.Api.DownloadApi.Configuration">
+             <summary>
+             Gets or sets the configuration object
+             </summary>
+             <value>An instance of the Configuration</value>
+            </member>
+        <member name="P:Org.Vitrivr.DresApi.Api.DownloadApi.ExceptionFactory">
+             <summary>
+             Provides a factory method hook for the creation of exceptions.
+             </summary>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.DownloadApi.DefaultHeader">
+             <summary>
+             Gets the default header.
+             </summary>
+             <returns>Dictionary of HTTP header</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.DownloadApi.AddDefaultHeader(System.String,System.String)">
+             <summary>
+             Add default header.
+             </summary>
+             <param name="key">Header field name.</param>
+             <param name="value">Header field value.</param>
+             <returns></returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.DownloadApi.GetApiV1DownloadCompetitionWithCompetitionid(System.String)">
+             <summary>
+             Provides a JSON download of the entire competition description structure. 
+             </summary>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="competitionId">Competition ID</param>
+             <returns>string</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.DownloadApi.GetApiV1DownloadCompetitionWithCompetitionidWithHttpInfo(System.String)">
+             <summary>
+             Provides a JSON download of the entire competition description structure. 
+             </summary>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="competitionId">Competition ID</param>
+             <returns>ApiResponse of string</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.DownloadApi.GetApiV1DownloadCompetitionWithCompetitionidAsync(System.String)">
+             <summary>
+             Provides a JSON download of the entire competition description structure. 
+             </summary>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="competitionId">Competition ID</param>
+             <returns>Task of string</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.DownloadApi.GetApiV1DownloadCompetitionWithCompetitionidAsyncWithHttpInfo(System.String)">
+             <summary>
+             Provides a JSON download of the entire competition description structure. 
+             </summary>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="competitionId">Competition ID</param>
+             <returns>Task of ApiResponse (string)</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.DownloadApi.GetApiV1DownloadRunWithRunid(System.String)">
+             <summary>
+             Provides a JSON download of the entire competition run structure. 
+             </summary>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="runId">Competition run ID</param>
+             <returns>string</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.DownloadApi.GetApiV1DownloadRunWithRunidWithHttpInfo(System.String)">
+             <summary>
+             Provides a JSON download of the entire competition run structure. 
+             </summary>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="runId">Competition run ID</param>
+             <returns>ApiResponse of string</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.DownloadApi.GetApiV1DownloadRunWithRunidAsync(System.String)">
+             <summary>
+             Provides a JSON download of the entire competition run structure. 
+             </summary>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="runId">Competition run ID</param>
+             <returns>Task of string</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.DownloadApi.GetApiV1DownloadRunWithRunidAsyncWithHttpInfo(System.String)">
+             <summary>
+             Provides a JSON download of the entire competition run structure. 
+             </summary>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="runId">Competition run ID</param>
+             <returns>Task of ApiResponse (string)</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.DownloadApi.GetApiV1DownloadRunWithRunidScores(System.String)">
+             <summary>
+             Provides a CSV download with the scores for a given competition run. 
+             </summary>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="runId">Competition run ID</param>
+             <returns>string</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.DownloadApi.GetApiV1DownloadRunWithRunidScoresWithHttpInfo(System.String)">
+             <summary>
+             Provides a CSV download with the scores for a given competition run. 
+             </summary>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="runId">Competition run ID</param>
+             <returns>ApiResponse of string</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.DownloadApi.GetApiV1DownloadRunWithRunidScoresAsync(System.String)">
+             <summary>
+             Provides a CSV download with the scores for a given competition run. 
+             </summary>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="runId">Competition run ID</param>
+             <returns>Task of string</returns>
+            </member>
+        <member name="M:Org.Vitrivr.DresApi.Api.DownloadApi.GetApiV1DownloadRunWithRunidScoresAsyncWithHttpInfo(System.String)">
+             <summary>
+             Provides a CSV download with the scores for a given competition run. 
+             </summary>
+             <exception cref="T:Org.Vitrivr.DresApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="runId">Competition run ID</param>
+             <returns>Task of ApiResponse (string)</returns>
             </member>
         <member name="T:Org.Vitrivr.DresApi.Client.ApiClient">
              <summary>

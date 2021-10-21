@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Org.Vitrivr.DresApi.Model;
 
 namespace Vitrivr.UnityInterface.DresApi
@@ -17,9 +18,21 @@ namespace Vitrivr.UnityInterface.DresApi
       UserDetails = await DresWrapper.Login(config.user, config.password);
     }
 
-    public async Task<SuccessfulSubmissionsStatus> SubmitResult(string item, int frame)
+    public async Task<SuccessfulSubmissionsStatus> SubmitResult(string item, int? frame = null)
     {
-      return await DresWrapper.Submit(item, frame, UserDetails.SessionId);
+      return await DresWrapper.Submit(item, UserDetails.SessionId, frame);
+    }
+
+    public async Task<SuccessStatus> LogResults(long timestamp, string sortType, string resultSetAvailability,
+      List<QueryResult> results, List<QueryEvent> events)
+    {
+      return await DresWrapper.LogResults(timestamp, sortType, resultSetAvailability, results, events,
+        UserDetails.SessionId);
+    }
+
+    public async Task<SuccessStatus> LogQueryEvents(long timestamp, List<QueryEvent> events)
+    {
+      return await DresWrapper.LogQueryEvents(timestamp, events, UserDetails.SessionId);
     }
   }
 }
