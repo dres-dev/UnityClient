@@ -4,10 +4,10 @@ An interface for [DRES](https://github.com/dres-dev/DRES), meant to be used in [
 
 ## Usage / Installation
 
-This is a upm package, add it through the [Unity Package Manager](https://docs.unity3d.com/Manual/Packages.html) as a package from git using the URL `https://github.com/vitrivr/DresUnityInterface.git#main` or directly by adding the following to your `manifest.json` for latest version:
+This is a upm package, add it through the [Unity Package Manager](https://docs.unity3d.com/Manual/Packages.html) as a package from git using the URL `https://github.com/dres-dev/UnityClient.git#main` or directly by adding the following to your `manifest.json` for latest version:
 
 ```json
-"dev.dres.unityclient": "https://github.com/vitrivr/DresUnityInterface.git#main"
+"dev.dres.unityclient": "https://github.com/dres-dev/UnityClient.git#main"
 ```
 
 ## Configuration
@@ -42,10 +42,10 @@ The configuration file contains vital information about DRES:
 
 ## Development
 
-For development, clone this repository into a directory `org.vitrivr.unityinterface.dresapi` inside the Packages directory of the Unity project you want to develop in.
+For development, clone this repository into a directory `dev.dres.unityclient` inside the Packages directory of the Unity project you want to develop in.
 
 ```
-$> git clone git@github.com:vitrivr/DresUnityInterface.git org.vitrivr.unityinterface.dresapi
+$> git clone git@github.com:dres-dev/UnityClient.git dev.dres.unityclient
 ```
 
 And subsequently (re-) generate the client libraries:
