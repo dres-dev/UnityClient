@@ -25,7 +25,7 @@ openApiGenerate {
   generatorName = "csharp"
   inputSpec = dresOAS
   outputDir = "$rootDir/Generated"
-  packageName = "Org.Vitrivr.DresApi"
+  packageName = "Dev.Dres.ClientApi"
   configOptions = [
     optionalEmitDefaultValues: "true"
   ]

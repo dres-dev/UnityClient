@@ -1,3 +1,9 @@
+# Custom Ignorings
+# Everything generated.
+[Gg]enerated
+[Gg]enerated/**
+Generated.meta
+
 # Created by https://www.gitignore.io/api/rider,unity
 # Edit at https://www.gitignore.io/?templates=rider,unity
 

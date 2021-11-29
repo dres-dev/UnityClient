@@ -14,7 +14,7 @@
     <assembly fullname="JsonSubTypes.Dres">
         <type fullname="*" preserve="all" />
     </assembly>
-    <assembly fullname="Org.Vitrivr.DresApi">
+    <assembly fullname="Dev.Dres.ClientApi">
         <type fullname="*" preserve="all" />
     </assembly>
     <assembly fullname="System.Core">
