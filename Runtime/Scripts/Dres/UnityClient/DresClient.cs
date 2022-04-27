@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Dev.Dres.ClientApi.Model;
+using UnityEditor;
 
 namespace Dres.Unityclient
 {
@@ -26,6 +27,7 @@ namespace Dres.Unityclient
       UserDetails = await DresWrapper.Login(config.user, config.password);
     }
 
+    
     /// <summary>
     /// Submits the given item (and optionally frame informaiton) to the DRES instance as current user.
     /// </summary>
@@ -36,6 +38,16 @@ namespace Dres.Unityclient
     public async Task<SuccessfulSubmissionsStatus> SubmitResult(string item, int? frame = null)
     {
       return await DresWrapper.Submit(item, UserDetails.SessionId, frame);
+    }
+
+    /// <summary>
+    /// Submits the given text to the DRES instance as current user
+    /// </summary>
+    /// <param name="text">The text to submit (this can be anything).</param>
+    /// <returns>The success / failure state of the operation</returns>
+    public async Task<SuccessfulSubmissionsStatus> SubmitTextualResult(string text)
+    {
+      return await DresWrapper.SubmitText(text, UserDetails.SessionId);
     }
 
     /// <summary>
