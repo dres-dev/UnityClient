@@ -72,7 +72,7 @@ namespace Dres.Unityclient
     /// <exception cref="ApiException">A 404 if there is no ongoing competition for this session, a 403 if there is no such user</exception>
     internal static async Task<SuccessfulSubmissionsStatus> SubmitText(string text, string session)
     {
-      return await SubmissionApi.GetApiV1SubmitAsync(text= text, session=session);
+      return await SubmissionApi.GetApiV1SubmitAsync(text: text, session: session);
     }
 
 
