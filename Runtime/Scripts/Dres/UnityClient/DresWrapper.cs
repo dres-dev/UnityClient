@@ -12,25 +12,25 @@ namespace Dres.Unityclient
   /// <br />
   /// This class is held deliberately stateless (no session ID etc.) to allow multi-user scenarios in the future.
   /// </summary>
-  public static class DresWrapper
+  internal static class DresWrapper
   {
     
     /// <summary>
     /// The deliberately single Logging Api instance of DRES. Used to send logs to DRES
     /// </summary>
-    public static readonly LogApi LogApi = new LogApi(DresConfigManager.Instance.ApiConfiguration);
+    internal static readonly LogApi LogApi = new LogApi(DresConfigManager.Instance.ApiConfiguration);
     /// <summary>
     /// The deliberately single Status Api instance of DRES. Used to get the status of DRES
     /// </summary>
-    public static readonly StatusApi StatusApi = new StatusApi(DresConfigManager.Instance.ApiConfiguration);
+    internal static readonly StatusApi StatusApi = new StatusApi(DresConfigManager.Instance.ApiConfiguration);
     /// <summary>
     /// The deliberately single Submission Api instance of DRES. Used to submit media items during competitions to DRES:
     /// </summary>
-    public static readonly SubmissionApi SubmissionApi = new SubmissionApi(DresConfigManager.Instance.ApiConfiguration);
+    internal static readonly SubmissionApi SubmissionApi = new SubmissionApi(DresConfigManager.Instance.ApiConfiguration);
     /// <summary>
     /// The deliberately single User Api instance of DRES. Used to log into DRES and retrieve the session id of the user.
     /// </summary>
-    public static readonly UserApi UserApi = new UserApi(DresConfigManager.Instance.ApiConfiguration);
+    internal static readonly UserApi UserApi = new UserApi(DresConfigManager.Instance.ApiConfiguration);
 
     /// <summary>
     /// Login to DRES with given username and password.
@@ -41,7 +41,7 @@ namespace Dres.Unityclient
     /// <param name="password">The DRES password</param>
     /// <returns>The login state on success.</returns>
     /// <exception cref="ApiException">If the config has no credentials set and no credentials file exists</exception>
-    public static async Task<UserDetails> Login(string user, string password)
+    internal static async Task<UserDetails> Login(string user, string password)
     {
       var loginRequest = new LoginRequest(user, password);
       return await UserApi.PostApiV1LoginAsync(loginRequest);
@@ -57,10 +57,24 @@ namespace Dres.Unityclient
     /// If no notion of frames exist for the item, this can likely be omitted.</param>
     /// <returns>The submission state on success / failure.</returns>
     /// <exception cref="ApiException">A 404 if there is no ongoing competition for this session, a 403 if there is no such user</exception>
-    public static async Task<SuccessfulSubmissionsStatus> Submit(string item, string session, int? frame = null)
+    internal static async Task<SuccessfulSubmissionsStatus> Submit(string item, string session, int? frame = null)
     {
       return await SubmissionApi.GetApiV1SubmitAsync(item: item, frame: frame, session: session);
     }
+    
+    /// <summary>
+    /// Submits given TEXT to the DRES endpoint.
+    /// Submissions are only allowed during active competitions (inferred from the given sesssion id)
+    /// </summary>
+    /// <param name="text">The submission in textual form (might also be a number) submit</param>
+    /// <param name="session">The session id to which this submission belongs</param>
+    /// <returns>The submission state on success / failure.</returns>
+    /// <exception cref="ApiException">A 404 if there is no ongoing competition for this session, a 403 if there is no such user</exception>
+    internal static async Task<SuccessfulSubmissionsStatus> SubmitText(string text, string session)
+    {
+      return await SubmissionApi.GetApiV1SubmitAsync(text: text, session: session);
+    }
+
 
     /// <summary>
     /// Send result logs to the DRES endpoint.
@@ -75,7 +89,7 @@ namespace Dres.Unityclient
     /// <param name="session">The session id to which this log belongs</param>
     /// <returns>The state of success / failure of the log sending.</returns>
     /// <exception cref="ApiException">A 404 if there is no ongoing competition for this session, a 403 if there is no such user</exception>
-    public static async Task<SuccessStatus> LogResults(long timestamp, string sortType, string resultSetAvailability,
+    internal static async Task<SuccessStatus> LogResults(long timestamp, string sortType, string resultSetAvailability,
       List<QueryResult> results, List<QueryEvent> events, string session)
     {
       var resultLog = new QueryResultLog(timestamp, sortType, resultSetAvailability, results, events);
@@ -92,7 +106,7 @@ namespace Dres.Unityclient
     /// <param name="session">The session id to which this log belongs</param>
     /// <returns>The state of success / failure of the log sending.</returns>
     /// <exception cref="ApiException">A 404 if there is no ongoing competition for this session, a 403 if there is no such user</exception>
-    public static async Task<SuccessStatus> LogQueryEvents(long timestamp, List<QueryEvent> events, string session)
+    internal static async Task<SuccessStatus> LogQueryEvents(long timestamp, List<QueryEvent> events, string session)
     {
       var queryEventLog = new QueryEventLog(timestamp, events);
       return await LogApi.PostApiV1LogQueryAsync(session, queryEventLog);
