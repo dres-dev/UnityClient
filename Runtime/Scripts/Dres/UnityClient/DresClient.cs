@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Dev.Dres.ClientApi.Model;
 using UnityEditor;
@@ -27,17 +28,16 @@ namespace Dres.Unityclient
       UserDetails = await DresWrapper.Login(config.user, config.password);
     }
 
-    
     /// <summary>
-    /// Submits the given item (and optionally frame informaiton) to the DRES instance as current user.
+    /// Submits the given item (and optionally start & end information) to the DRES instance as current user.
     /// </summary>
     /// <param name="item">The item name or identifier to submit</param>
-    /// <param name="frame">Optional, the item's frame number. This can likely be omitted, if there is no such
-    /// concept as frames for the given item (e.g. for videos, a frame is reasonable while for images it isn't.</param>
+    /// <param name="start">Optional, the item's start time</param>
+    /// <param name="end">Optional, the item's end time</param>
     /// <returns>The success / failure state of the operation</returns>
-    public async Task<SuccessfulSubmissionsStatus> SubmitResult(string item, int? frame = null)
+    public Task<SuccessfulSubmissionsStatus> SubmitResultV2(string item, long? start = null, long? end = null)
     {
-      return await DresWrapper.Submit(item, UserDetails.SessionId, frame);
+      return DresWrapper.SubmitV2(UserDetails.SessionId, item, start, end);
     }
 
     /// <summary>
@@ -45,9 +45,34 @@ namespace Dres.Unityclient
     /// </summary>
     /// <param name="text">The text to submit (this can be anything).</param>
     /// <returns>The success / failure state of the operation</returns>
-    public async Task<SuccessfulSubmissionsStatus> SubmitTextualResult(string text)
+    public Task<SuccessfulSubmissionsStatus> SubmitTextualResultV2(string text)
     {
-      return await DresWrapper.SubmitText(text, UserDetails.SessionId);
+      return DresWrapper.SubmitTextV2(UserDetails.SessionId, text);
+    }
+
+
+    /// <summary>
+    /// Submits the given item (and optionally frame informaiton) to the DRES instance as current user.
+    /// </summary>
+    /// <param name="item">The item name or identifier to submit</param>
+    /// <param name="frame">Optional, the item's frame number. This can likely be omitted, if there is no such
+    /// concept as frames for the given item (e.g. for videos, a frame is reasonable while for images it isn't.</param>
+    /// <returns>The success / failure state of the operation</returns>
+    [Obsolete("Obsolete")]
+    public Task<SuccessfulSubmissionsStatus> SubmitResult(string item, int? frame = null)
+    {
+      return DresWrapper.Submit(item, UserDetails.SessionId, frame);
+    }
+
+    /// <summary>
+    /// Submits the given text to the DRES instance as current user
+    /// </summary>
+    /// <param name="text">The text to submit (this can be anything).</param>
+    /// <returns>The success / failure state of the operation</returns>
+    [Obsolete("Obsolete")]
+    public Task<SuccessfulSubmissionsStatus> SubmitTextualResult(string text)
+    {
+      return DresWrapper.SubmitText(text, UserDetails.SessionId);
     }
 
     /// <summary>

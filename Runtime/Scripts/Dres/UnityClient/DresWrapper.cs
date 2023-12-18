@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Dev.Dres.ClientApi.Api;
 using Dev.Dres.ClientApi.Client;
@@ -14,22 +15,24 @@ namespace Dres.Unityclient
   /// </summary>
   internal static class DresWrapper
   {
-    
-    
     internal static readonly EvaluationClientApi EvaluationClientApi = new(DresConfigManager.Instance.ApiConfiguration);
     internal static readonly EvaluationApi EvaluationApi = new(DresConfigManager.Instance.ApiConfiguration);
+
     /// <summary>
     /// The deliberately single Logging Api instance of DRES. Used to send logs to DRES
     /// </summary>
     internal static readonly LogApi LogApi = new(DresConfigManager.Instance.ApiConfiguration);
+
     /// <summary>
     /// The deliberately single Status Api instance of DRES. Used to get the status of DRES
     /// </summary>
     internal static readonly StatusApi StatusApi = new(DresConfigManager.Instance.ApiConfiguration);
+
     /// <summary>
     /// The deliberately single Submission Api instance of DRES. Used to submit media items during competitions to DRES:
     /// </summary>
     internal static readonly SubmissionApi SubmissionApi = new(DresConfigManager.Instance.ApiConfiguration);
+
     /// <summary>
     /// The deliberately single User Api instance of DRES. Used to log into DRES and retrieve the session id of the user.
     /// </summary>
@@ -56,6 +59,43 @@ namespace Dres.Unityclient
     }
 
     /// <summary>
+    /// Submits an item to the DRES endpoint using the DRES API v2.
+    /// </summary>
+    /// <param name="session">The session ID to which this submission belongs</param>
+    /// <param name="item">The name of the item (or identifier) to submit</param>
+    /// <param name="start">The optional start (in milliseconds) of the submitted item</param>
+    /// <param name="end">The optional end (in milliseconds) of the submitted item</param>
+    /// <returns>The submission state on success / failure.</returns>
+    internal static Task<SuccessfulSubmissionsStatus> SubmitV2(string session, string item, long? start = null,
+      long? end = null)
+    {
+      var answerSets = new List<ApiClientAnswerSet>
+      {
+        new(answers: new List<ApiClientAnswer>
+        {
+          new(mediaItemName: item, start: start.GetValueOrDefault(), end: end.GetValueOrDefault())
+        })
+      };
+      var apiClientSubmission = new ApiClientSubmission(answerSets);
+      return SubmissionApi.PostApiV2SubmitByEvaluationIdAsync(null, apiClientSubmission, session);
+    }
+
+    /// <summary>
+    /// Submits text to the DRES endpoint using the DRES API v2.
+    /// </summary>
+    /// <param name="session">The session ID to which this submission belongs</param>
+    /// <param name="text">The text to submit</param>
+    /// <returns>The submission state on success / failure.</returns>
+    internal static Task<SuccessfulSubmissionsStatus> SubmitTextV2(string session, string text)
+    {
+      var answerSets = new List<ApiClientAnswerSet> { new(answers: new List<ApiClientAnswer> { new(text: text) }) };
+      var apiClientSubmission = new ApiClientSubmission(answerSets);
+      return SubmissionApi.PostApiV2SubmitByEvaluationIdAsync(null, apiClientSubmission, session);
+    }
+
+    // TODO: Once the functionality of the new API is confirmed, implement bulk submission
+
+    /// <summary>
     /// Submits an item to the DRES endpoint.
     /// Submissions are only allowed during active competitions (inferred from the given sesssion id)
     /// </summary>
@@ -65,11 +105,12 @@ namespace Dres.Unityclient
     /// If no notion of frames exist for the item, this can likely be omitted.</param>
     /// <returns>The submission state on success / failure.</returns>
     /// <exception cref="ApiException">A 404 if there is no ongoing competition for this session, a 403 if there is no such user</exception>
-    internal static async Task<SuccessfulSubmissionsStatus> Submit(string item, string session, int? frame = null)
+    [Obsolete("Obsolete")]
+    internal static Task<SuccessfulSubmissionsStatus> Submit(string item, string session, int? frame = null)
     {
-      return await SubmissionApi.GetApiV1SubmitAsync(item: item, frame: frame, session: session);
+      return SubmissionApi.GetApiV1SubmitAsync(item: item, frame: frame, session: session);
     }
-    
+
     /// <summary>
     /// Submits given TEXT to the DRES endpoint.
     /// Submissions are only allowed during active competitions (inferred from the given sesssion id)
@@ -78,9 +119,10 @@ namespace Dres.Unityclient
     /// <param name="session">The session id to which this submission belongs</param>
     /// <returns>The submission state on success / failure.</returns>
     /// <exception cref="ApiException">A 404 if there is no ongoing competition for this session, a 403 if there is no such user</exception>
-    internal static async Task<SuccessfulSubmissionsStatus> SubmitText(string text, string session)
+    [Obsolete("Obsolete")]
+    internal static Task<SuccessfulSubmissionsStatus> SubmitText(string text, string session)
     {
-      return await SubmissionApi.GetApiV1SubmitAsync(text: text, session: session);
+      return SubmissionApi.GetApiV1SubmitAsync(text: text, session: session);
     }
 
 
