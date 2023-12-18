@@ -15,7 +15,7 @@ namespace Dres.Unityclient
     /// <summary>
     /// The user state, available after <see cref="Login"/>.
     /// </summary>
-    public UserDetails UserDetails;
+    public ApiUser UserDetails;
 
     /// <summary>
     /// Login to DRES with the currently loaded credentials.

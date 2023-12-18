@@ -3,7 +3,7 @@ import org.apache.tools.ant.taskdefs.condition.Os
 
 /* Get the openapi generator plugin */
 plugins {
-  id "org.openapi.generator" version "4.3.1"
+  id "org.openapi.generator" version "6.4.0"
 }
 
 /* Setup OpenApi Specs (OAS): Defaults to default.*/
@@ -11,7 +11,7 @@ plugins {
  + http://localhost:8080/client-oas.json // Local DRES
  + https://raw.githubusercontent.com/dres-dev/DRES/master/doc/oas-client.json // When oas-client is released
 */
-def dresOAS = "https://raw.githubusercontent.com/dres-dev/DRES/1.0/doc/oas-client.json"
+def dresOAS = "https://raw.githubusercontent.com/dres-dev/DRES/2.0.0-RC1/doc/oas-client.json"
 /* If gradle gets 'oas' argument (with -Poas="path/to/OAS"), take these */
 if(project.hasProperty('oas')){
     dresOAS = oas
@@ -68,9 +68,9 @@ task modex(type: Exec){
 task deployLibs(type: Copy){
   from(file("$rootDir/Generated/bin"))
   into(file("$rootDir/Runtime/Libs"))
-  rename("RestSharp.dll", "RestSharp.Dres.dll")
-  rename("Newtonsoft.Json.dll", "Newtonsoft.Json.Dres.dll")
-  rename("JsonSubTypes.dll", "JsonSubTypes.Dres.dll")
+  rename("RestSharp.dll", "RestSharp." + dllName + ".dll")
+  rename("Newtonsoft.Json.dll", "Newtonsoft.Json." + dllName + ".dll")
+  rename("JsonSubTypes.dll", "JsonSubTypes." + dllName + ".dll")
 }
 
 /* Copy the mandatory link.xml */
