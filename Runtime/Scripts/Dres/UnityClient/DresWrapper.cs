@@ -16,7 +16,6 @@ namespace Dres.Unityclient
   internal static class DresWrapper
   {
     internal static readonly EvaluationClientApi EvaluationClientApi = new(DresConfigManager.Instance.ApiConfiguration);
-    internal static readonly EvaluationApi EvaluationApi = new(DresConfigManager.Instance.ApiConfiguration);
 
     /// <summary>
     /// The deliberately single Logging Api instance of DRES. Used to send logs to DRES
@@ -53,6 +52,11 @@ namespace Dres.Unityclient
       return UserApi.PostApiV2LoginAsync(loginRequest);
     }
 
+    internal static Task<List<ApiEvaluationInfo>> ListClientEvaluations(string session)
+    {
+      return EvaluationClientApi.GetApiV2ClientEvaluationListAsync(session);
+    }
+
     internal static Task<ApiTaskTemplateInfo> GetTaskInfo(string evaluationId, string session)
     {
       return EvaluationClientApi.GetApiV2ClientEvaluationCurrentTaskByEvaluationIdAsync(evaluationId, session);
@@ -62,11 +66,12 @@ namespace Dres.Unityclient
     /// Submits an item to the DRES endpoint using the DRES API v2.
     /// </summary>
     /// <param name="session">The session ID to which this submission belongs</param>
+    /// <param name="evaluationId">The evaluation ID to which this submission belongs</param>
     /// <param name="item">The name of the item (or identifier) to submit</param>
     /// <param name="start">The optional start (in milliseconds) of the submitted item</param>
     /// <param name="end">The optional end (in milliseconds) of the submitted item</param>
     /// <returns>The submission state on success / failure.</returns>
-    internal static Task<SuccessfulSubmissionsStatus> SubmitV2(string session, string item, long? start = null,
+    internal static Task<SuccessfulSubmissionsStatus> SubmitV2(string session, string evaluationId, string item, long? start = null,
       long? end = null)
     {
       var answerSets = new List<ApiClientAnswerSet>
@@ -77,20 +82,21 @@ namespace Dres.Unityclient
         })
       };
       var apiClientSubmission = new ApiClientSubmission(answerSets);
-      return SubmissionApi.PostApiV2SubmitByEvaluationIdAsync(null, apiClientSubmission, session);
+      return SubmissionApi.PostApiV2SubmitByEvaluationIdAsync(evaluationId, apiClientSubmission, session);
     }
 
     /// <summary>
     /// Submits text to the DRES endpoint using the DRES API v2.
     /// </summary>
     /// <param name="session">The session ID to which this submission belongs</param>
+    /// <param name="evaluationId">The evaluation ID to which this submission belongs</param>
     /// <param name="text">The text to submit</param>
     /// <returns>The submission state on success / failure.</returns>
-    internal static Task<SuccessfulSubmissionsStatus> SubmitTextV2(string session, string text)
+    internal static Task<SuccessfulSubmissionsStatus> SubmitTextV2(string session, string evaluationId, string text)
     {
       var answerSets = new List<ApiClientAnswerSet> { new(answers: new List<ApiClientAnswer> { new(text: text) }) };
       var apiClientSubmission = new ApiClientSubmission(answerSets);
-      return SubmissionApi.PostApiV2SubmitByEvaluationIdAsync(null, apiClientSubmission, session);
+      return SubmissionApi.PostApiV2SubmitByEvaluationIdAsync(evaluationId, apiClientSubmission, session);
     }
 
     // TODO: Once the functionality of the new API is confirmed, implement bulk submission

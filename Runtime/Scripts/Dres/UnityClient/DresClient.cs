@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Dev.Dres.ClientApi.Model;
-using UnityEditor;
+using JetBrains.Annotations;
 
 namespace Dres.Unityclient
 {
@@ -16,7 +16,18 @@ namespace Dres.Unityclient
     /// <summary>
     /// The user state, available after <see cref="Login"/>.
     /// </summary>
-    public ApiUser UserDetails;
+    public ApiUser UserDetails { get; private set; }
+
+    /// <summary>
+    /// List of the available evaluations for the current user.
+    /// Must be updated manually with <see cref="UpdateEvaluations"/> before use.
+    /// </summary>
+    public List<ApiEvaluationInfo> EvaluationInfo { get; private set; }
+
+    /// <summary>
+    /// The currently selected evaluation. Used for submissions.
+    /// </summary>
+    public ApiEvaluationInfo CurrentEvaluation { get; private set; }
 
     /// <summary>
     /// Login to DRES with the currently loaded credentials.
@@ -29,25 +40,51 @@ namespace Dres.Unityclient
     }
 
     /// <summary>
+    /// Updates the list of available evaluations for the current user.
+    /// </summary>
+    /// <returns>List of available evaluations</returns>
+    public async Task<List<ApiEvaluationInfo>> UpdateEvaluations()
+    {
+      EvaluationInfo = await DresWrapper.ListClientEvaluations(UserDetails.SessionId);
+      return EvaluationInfo;
+    }
+
+    /// <summary>
+    /// Sets the current evaluation to the one with the given id.
+    /// </summary>
+    /// <param name="evaluationId">The id of the evaluation to set as current</param>
+    /// <returns>True if the evaluation was found and set, false otherwise</returns>
+    public bool SetCurrentEvaluation(string evaluationId)
+    {
+      CurrentEvaluation = EvaluationInfo.Find(evaluation => evaluation.Id == evaluationId);
+      return CurrentEvaluation != null;
+    }
+
+    /// <summary>
     /// Submits the given item (and optionally start & end information) to the DRES instance as current user.
     /// </summary>
     /// <param name="item">The item name or identifier to submit</param>
     /// <param name="start">Optional, the item's start time</param>
     /// <param name="end">Optional, the item's end time</param>
+    /// <param name="evaluationId">Manual override of the evaluation ID of the currently set evaluation.</param>
     /// <returns>The success / failure state of the operation</returns>
-    public Task<SuccessfulSubmissionsStatus> SubmitResultV2(string item, long? start = null, long? end = null)
+    public Task<SuccessfulSubmissionsStatus> SubmitResultV2(string item, long? start = null, long? end = null,
+      [CanBeNull] string evaluationId = null)
     {
-      return DresWrapper.SubmitV2(UserDetails.SessionId, item, start, end);
+      evaluationId ??= CurrentEvaluation.Id;
+      return DresWrapper.SubmitV2(UserDetails.SessionId, evaluationId, item, start, end);
     }
 
     /// <summary>
     /// Submits the given text to the DRES instance as current user
     /// </summary>
     /// <param name="text">The text to submit (this can be anything).</param>
+    /// <param name="evaluationId">Manual override of the evaluation ID of the currently set evaluation.</param>
     /// <returns>The success / failure state of the operation</returns>
-    public Task<SuccessfulSubmissionsStatus> SubmitTextualResultV2(string text)
+    public Task<SuccessfulSubmissionsStatus> SubmitTextualResultV2(string text, [CanBeNull] string evaluationId = null)
     {
-      return DresWrapper.SubmitTextV2(UserDetails.SessionId, text);
+      evaluationId ??= CurrentEvaluation.Id;
+      return DresWrapper.SubmitTextV2(UserDetails.SessionId, evaluationId, text);
     }
 
 
@@ -86,10 +123,10 @@ namespace Dres.Unityclient
     /// <param name="results">The results to log</param>
     /// <param name="events">The events associated with these results</param>
     /// <returns>The success / failure state of the operation</returns>
-    public async Task<SuccessStatus> LogResults(long timestamp, string sortType, string resultSetAvailability,
+    public Task<SuccessStatus> LogResults(long timestamp, string sortType, string resultSetAvailability,
       List<QueryResult> results, List<QueryEvent> events)
     {
-      return await DresWrapper.LogResults(timestamp, sortType, resultSetAvailability, results, events,
+      return DresWrapper.LogResults(timestamp, sortType, resultSetAvailability, results, events,
         UserDetails.SessionId);
     }
 
@@ -101,9 +138,9 @@ namespace Dres.Unityclient
     /// <param name="timestamp">The client side timestamp of this log</param>
     /// <param name="events">The events to log</param>
     /// <returns>The success / failure state of the operation</returns>
-    public async Task<SuccessStatus> LogQueryEvents(long timestamp, List<QueryEvent> events)
+    public Task<SuccessStatus> LogQueryEvents(long timestamp, List<QueryEvent> events)
     {
-      return await DresWrapper.LogQueryEvents(timestamp, events, UserDetails.SessionId);
+      return DresWrapper.LogQueryEvents(timestamp, events, UserDetails.SessionId);
     }
   }
 }
