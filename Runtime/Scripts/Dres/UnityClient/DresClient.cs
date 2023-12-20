@@ -22,12 +22,12 @@ namespace Dres.Unityclient
     /// List of the available evaluations for the current user.
     /// Must be updated manually with <see cref="UpdateEvaluations"/> before use.
     /// </summary>
-    public List<ApiEvaluationInfo> EvaluationInfo { get; private set; }
+    public List<ApiClientEvaluationInfo> EvaluationInfo { get; private set; }
 
     /// <summary>
     /// The currently selected evaluation. Used for submissions.
     /// </summary>
-    public ApiEvaluationInfo CurrentEvaluation { get; private set; }
+    public ApiClientEvaluationInfo CurrentEvaluation { get; private set; }
 
     /// <summary>
     /// Login to DRES with the currently loaded credentials.
@@ -43,7 +43,7 @@ namespace Dres.Unityclient
     /// Updates the list of available evaluations for the current user.
     /// </summary>
     /// <returns>List of available evaluations</returns>
-    public async Task<List<ApiEvaluationInfo>> UpdateEvaluations()
+    public async Task<List<ApiClientEvaluationInfo>> UpdateEvaluations()
     {
       EvaluationInfo = await DresWrapper.ListClientEvaluations(UserDetails.SessionId);
       return EvaluationInfo;

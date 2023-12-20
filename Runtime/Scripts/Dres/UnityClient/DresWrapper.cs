@@ -52,7 +52,7 @@ namespace Dres.Unityclient
       return UserApi.PostApiV2LoginAsync(loginRequest);
     }
 
-    internal static Task<List<ApiEvaluationInfo>> ListClientEvaluations(string session)
+    internal static Task<List<ApiClientEvaluationInfo>> ListClientEvaluations(string session)
     {
       return EvaluationClientApi.GetApiV2ClientEvaluationListAsync(session);
     }
