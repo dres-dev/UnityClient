@@ -1,6 +1,6 @@
 {
   "name": "dev.dres.unityclient",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "displayName": "DRES Unity Client",
   "description": "An all-unity client for [DRES](https://github.com/dres-dev/DRES)",
   "unity": "2020.3",
