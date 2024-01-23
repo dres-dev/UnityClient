@@ -1,10 +1,5 @@
 # DresUnityInterface
 
----
-** ATTENTION **
-** The unity interface points to version 1.3 of DRES, which is behind the current version v2.0.0-RC1""
----
-
 An interface for [DRES](https://github.com/dres-dev/DRES), meant to be used in [Unity](https://unity.com/).
 
 ## Usage / Installation
