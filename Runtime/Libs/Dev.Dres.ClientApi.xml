@@ -643,6 +643,72 @@
              Enum IMAGE for value: IMAGE
              </summary>
             </member>
+        <member name="T:Dev.Dres.ClientApi.Model.RankedAnswer">
+             <summary>
+             RankedAnswer
+             </summary>
+            </member>
+        <member name="M:Dev.Dres.ClientApi.Model.RankedAnswer.#ctor">
+             <summary>
+             Initializes a new instance of the <see cref="T:Dev.Dres.ClientApi.Model.RankedAnswer" /> class.
+             </summary>
+            </member>
+        <member name="M:Dev.Dres.ClientApi.Model.RankedAnswer.#ctor(Dev.Dres.ClientApi.Model.ApiClientAnswer,System.Int32)">
+             <summary>
+             Initializes a new instance of the <see cref="T:Dev.Dres.ClientApi.Model.RankedAnswer" /> class.
+             </summary>
+             <param name="answer">answer (required).</param>
+             <param name="rank">rank.</param>
+            </member>
+        <member name="P:Dev.Dres.ClientApi.Model.RankedAnswer.Answer">
+             <summary>
+             Gets or Sets Answer
+             </summary>
+            </member>
+        <member name="P:Dev.Dres.ClientApi.Model.RankedAnswer.Rank">
+             <summary>
+             Gets or Sets Rank
+             </summary>
+            </member>
+        <member name="M:Dev.Dres.ClientApi.Model.RankedAnswer.ToString">
+             <summary>
+             Returns the string presentation of the object
+             </summary>
+             <returns>String presentation of the object</returns>
+            </member>
+        <member name="M:Dev.Dres.ClientApi.Model.RankedAnswer.ToJson">
+             <summary>
+             Returns the JSON string presentation of the object
+             </summary>
+             <returns>JSON string presentation of the object</returns>
+            </member>
+        <member name="M:Dev.Dres.ClientApi.Model.RankedAnswer.Equals(System.Object)">
+             <summary>
+             Returns true if objects are equal
+             </summary>
+             <param name="input">Object to be compared</param>
+             <returns>Boolean</returns>
+            </member>
+        <member name="M:Dev.Dres.ClientApi.Model.RankedAnswer.Equals(Dev.Dres.ClientApi.Model.RankedAnswer)">
+             <summary>
+             Returns true if RankedAnswer instances are equal
+             </summary>
+             <param name="input">Instance of RankedAnswer to be compared</param>
+             <returns>Boolean</returns>
+            </member>
+        <member name="M:Dev.Dres.ClientApi.Model.RankedAnswer.GetHashCode">
+             <summary>
+             Gets the hash code
+             </summary>
+             <returns>Hash code</returns>
+            </member>
+        <member name="M:Dev.Dres.ClientApi.Model.RankedAnswer.System#ComponentModel#DataAnnotations#IValidatableObject#Validate(System.ComponentModel.DataAnnotations.ValidationContext)">
+             <summary>
+             To validate all properties of the instance
+             </summary>
+             <param name="validationContext">Validation context</param>
+             <returns>Validation Result</returns>
+            </member>
         <member name="T:Dev.Dres.ClientApi.Model.ApiViewerInfo">
              <summary>
              ApiViewerInfo
@@ -1649,7 +1715,7 @@
              Initializes a new instance of the <see cref="T:Dev.Dres.ClientApi.Model.QueryResultLog" /> class.
              </summary>
             </member>
-        <member name="M:Dev.Dres.ClientApi.Model.QueryResultLog.#ctor(System.Int64,System.String,System.String,System.Collections.Generic.List{Dev.Dres.ClientApi.Model.QueryResult},System.Collections.Generic.List{Dev.Dres.ClientApi.Model.QueryEvent})">
+        <member name="M:Dev.Dres.ClientApi.Model.QueryResultLog.#ctor(System.Int64,System.String,System.String,System.Collections.Generic.List{Dev.Dres.ClientApi.Model.RankedAnswer},System.Collections.Generic.List{Dev.Dres.ClientApi.Model.QueryEvent})">
              <summary>
              Initializes a new instance of the <see cref="T:Dev.Dres.ClientApi.Model.QueryResultLog" /> class.
              </summary>
@@ -4466,90 +4532,6 @@
              Enum EXTERNALVIDEO for value: EXTERNAL_VIDEO
              </summary>
             </member>
-        <member name="T:Dev.Dres.ClientApi.Model.QueryResult">
-             <summary>
-             QueryResult
-             </summary>
-            </member>
-        <member name="M:Dev.Dres.ClientApi.Model.QueryResult.#ctor">
-             <summary>
-             Initializes a new instance of the <see cref="T:Dev.Dres.ClientApi.Model.QueryResult" /> class.
-             </summary>
-            </member>
-        <member name="M:Dev.Dres.ClientApi.Model.QueryResult.#ctor(System.String,System.Int32,System.Int32,System.Double,System.Int32)">
-             <summary>
-             Initializes a new instance of the <see cref="T:Dev.Dres.ClientApi.Model.QueryResult" /> class.
-             </summary>
-             <param name="item">item (required).</param>
-             <param name="segment">segment.</param>
-             <param name="frame">frame.</param>
-             <param name="score">score.</param>
-             <param name="rank">rank.</param>
-            </member>
-        <member name="P:Dev.Dres.ClientApi.Model.QueryResult.Item">
-             <summary>
-             Gets or Sets Item
-             </summary>
-            </member>
-        <member name="P:Dev.Dres.ClientApi.Model.QueryResult.Segment">
-             <summary>
-             Gets or Sets Segment
-             </summary>
-            </member>
-        <member name="P:Dev.Dres.ClientApi.Model.QueryResult.Frame">
-             <summary>
-             Gets or Sets Frame
-             </summary>
-            </member>
-        <member name="P:Dev.Dres.ClientApi.Model.QueryResult.Score">
-             <summary>
-             Gets or Sets Score
-             </summary>
-            </member>
-        <member name="P:Dev.Dres.ClientApi.Model.QueryResult.Rank">
-             <summary>
-             Gets or Sets Rank
-             </summary>
-            </member>
-        <member name="M:Dev.Dres.ClientApi.Model.QueryResult.ToString">
-             <summary>
-             Returns the string presentation of the object
-             </summary>
-             <returns>String presentation of the object</returns>
-            </member>
-        <member name="M:Dev.Dres.ClientApi.Model.QueryResult.ToJson">
-             <summary>
-             Returns the JSON string presentation of the object
-             </summary>
-             <returns>JSON string presentation of the object</returns>
-            </member>
-        <member name="M:Dev.Dres.ClientApi.Model.QueryResult.Equals(System.Object)">
-             <summary>
-             Returns true if objects are equal
-             </summary>
-             <param name="input">Object to be compared</param>
-             <returns>Boolean</returns>
-            </member>
-        <member name="M:Dev.Dres.ClientApi.Model.QueryResult.Equals(Dev.Dres.ClientApi.Model.QueryResult)">
-             <summary>
-             Returns true if QueryResult instances are equal
-             </summary>
-             <param name="input">Instance of QueryResult to be compared</param>
-             <returns>Boolean</returns>
-            </member>
-        <member name="M:Dev.Dres.ClientApi.Model.QueryResult.GetHashCode">
-             <summary>
-             Gets the hash code
-             </summary>
-             <returns>Hash code</returns>
-            </member>
-        <member name="M:Dev.Dres.ClientApi.Model.QueryResult.System#ComponentModel#DataAnnotations#IValidatableObject#Validate(System.ComponentModel.DataAnnotations.ValidationContext)">
-             <summary>
-             To validate all properties of the instance
-             </summary>
-             <param name="validationContext">Validation context</param>
-             <returns>Validation Result</returns>
-            </member>
         <member name="T:Dev.Dres.ClientApi.Model.ApiEvaluationType">
              <summary>
              Defines ApiEvaluationType
@@ -5788,7 +5770,7 @@
              <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
              <param name="evaluationId">The evaluation ID.</param>
              <param name="session">Session Token (optional)</param>
-             <returns>ApiTaskTemplateInfo</returns>
+             <returns>ApiClientTaskTemplateInfo</returns>
             </member>
         <member name="M:Dev.Dres.ClientApi.Api.IEvaluationClientApi.GetApiV2ClientEvaluationCurrentTaskByEvaluationIdWithHttpInfo(System.String,System.String)">
              <summary>
@@ -5800,7 +5782,7 @@
              <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
              <param name="evaluationId">The evaluation ID.</param>
              <param name="session">Session Token (optional)</param>
-             <returns>ApiResponse of ApiTaskTemplateInfo</returns>
+             <returns>ApiResponse of ApiClientTaskTemplateInfo</returns>
             </member>
         <!--FIXME: Invalid documentation markup was found for member M:Dev.Dres.ClientApi.Api.IEvaluationClientApi.GetApiV2ClientEvaluationList(System.String)-->
         <!--FIXME: Invalid documentation markup was found for member M:Dev.Dres.ClientApi.Api.IEvaluationClientApi.GetApiV2ClientEvaluationListWithHttpInfo(System.String)-->
@@ -5815,7 +5797,7 @@
              <param name="evaluationId">The evaluation ID.</param>
              <param name="session">Session Token (optional)</param>
              <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-             <returns>Task of ApiTaskTemplateInfo</returns>
+             <returns>Task of ApiClientTaskTemplateInfo</returns>
             </member>
         <member name="M:Dev.Dres.ClientApi.Api.IEvaluationClientApi.GetApiV2ClientEvaluationCurrentTaskByEvaluationIdWithHttpInfoAsync(System.String,System.String,System.Threading.CancellationToken)">
              <summary>
@@ -5828,7 +5810,7 @@
              <param name="evaluationId">The evaluation ID.</param>
              <param name="session">Session Token (optional)</param>
              <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-             <returns>Task of ApiResponse (ApiTaskTemplateInfo)</returns>
+             <returns>Task of ApiResponse (ApiClientTaskTemplateInfo)</returns>
             </member>
         <!--FIXME: Invalid documentation markup was found for member M:Dev.Dres.ClientApi.Api.IEvaluationClientApi.GetApiV2ClientEvaluationListAsync(System.String,System.Threading.CancellationToken)-->
         <member name="M:Dev.Dres.ClientApi.Api.IEvaluationClientApi.GetApiV2ClientEvaluationListWithHttpInfoAsync(System.String,System.Threading.CancellationToken)">
@@ -5912,7 +5894,7 @@
              <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
              <param name="evaluationId">The evaluation ID.</param>
              <param name="session">Session Token (optional)</param>
-             <returns>ApiTaskTemplateInfo</returns>
+             <returns>ApiClientTaskTemplateInfo</returns>
             </member>
         <member name="M:Dev.Dres.ClientApi.Api.EvaluationClientApi.GetApiV2ClientEvaluationCurrentTaskByEvaluationIdWithHttpInfo(System.String,System.String)">
              <summary>
@@ -5921,7 +5903,7 @@
              <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
              <param name="evaluationId">The evaluation ID.</param>
              <param name="session">Session Token (optional)</param>
-             <returns>ApiResponse of ApiTaskTemplateInfo</returns>
+             <returns>ApiResponse of ApiClientTaskTemplateInfo</returns>
             </member>
         <member name="M:Dev.Dres.ClientApi.Api.EvaluationClientApi.GetApiV2ClientEvaluationCurrentTaskByEvaluationIdAsync(System.String,System.String,System.Threading.CancellationToken)">
              <summary>
@@ -5931,7 +5913,7 @@
              <param name="evaluationId">The evaluation ID.</param>
              <param name="session">Session Token (optional)</param>
              <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-             <returns>Task of ApiTaskTemplateInfo</returns>
+             <returns>Task of ApiClientTaskTemplateInfo</returns>
             </member>
         <member name="M:Dev.Dres.ClientApi.Api.EvaluationClientApi.GetApiV2ClientEvaluationCurrentTaskByEvaluationIdWithHttpInfoAsync(System.String,System.String,System.Threading.CancellationToken)">
              <summary>
@@ -5941,7 +5923,7 @@
              <param name="evaluationId">The evaluation ID.</param>
              <param name="session">Session Token (optional)</param>
              <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-             <returns>Task of ApiResponse (ApiTaskTemplateInfo)</returns>
+             <returns>Task of ApiResponse (ApiClientTaskTemplateInfo)</returns>
             </member>
         <!--FIXME: Invalid documentation markup was found for member M:Dev.Dres.ClientApi.Api.EvaluationClientApi.GetApiV2ClientEvaluationList(System.String)-->
         <!--FIXME: Invalid documentation markup was found for member M:Dev.Dres.ClientApi.Api.EvaluationClientApi.GetApiV2ClientEvaluationListWithHttpInfo(System.String)-->
@@ -6390,101 +6372,109 @@
              Represents a collection of functions to interact with the API endpoints
              </summary>
             </member>
-        <member name="M:Dev.Dres.ClientApi.Api.ILogApi.PostApiV2LogQuery(System.String,Dev.Dres.ClientApi.Model.QueryEventLog)">
+        <member name="M:Dev.Dres.ClientApi.Api.ILogApi.PostApiV2LogQueryByEvaluationId(System.String,System.String,Dev.Dres.ClientApi.Model.QueryEventLog)">
              <summary>
-             Accepts query logs from participants
+             Accepts query logs from participants for the specified evaluation.
              </summary>
              <remarks>
              
              </remarks>
              <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="evaluationId">The evaluation ID.</param>
              <param name="session">Session Token</param>
              <param name="queryEventLog"> (optional)</param>
              <returns>SuccessStatus</returns>
             </member>
-        <member name="M:Dev.Dres.ClientApi.Api.ILogApi.PostApiV2LogQueryWithHttpInfo(System.String,Dev.Dres.ClientApi.Model.QueryEventLog)">
+        <member name="M:Dev.Dres.ClientApi.Api.ILogApi.PostApiV2LogQueryByEvaluationIdWithHttpInfo(System.String,System.String,Dev.Dres.ClientApi.Model.QueryEventLog)">
              <summary>
-             Accepts query logs from participants
+             Accepts query logs from participants for the specified evaluation.
              </summary>
              <remarks>
              
              </remarks>
              <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="evaluationId">The evaluation ID.</param>
              <param name="session">Session Token</param>
              <param name="queryEventLog"> (optional)</param>
              <returns>ApiResponse of SuccessStatus</returns>
             </member>
-        <member name="M:Dev.Dres.ClientApi.Api.ILogApi.PostApiV2LogResult(System.String,Dev.Dres.ClientApi.Model.QueryResultLog)">
+        <member name="M:Dev.Dres.ClientApi.Api.ILogApi.PostApiV2LogResultByEvaluationId(System.String,System.String,Dev.Dres.ClientApi.Model.QueryResultLog)">
              <summary>
-             Accepts result logs from participants.
+             Accepts result logs from participants  for the specified evaluation.
              </summary>
              <remarks>
              
              </remarks>
              <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="evaluationId">The evaluation ID.</param>
              <param name="session">Session Token</param>
              <param name="queryResultLog"> (optional)</param>
              <returns>SuccessStatus</returns>
             </member>
-        <member name="M:Dev.Dres.ClientApi.Api.ILogApi.PostApiV2LogResultWithHttpInfo(System.String,Dev.Dres.ClientApi.Model.QueryResultLog)">
+        <member name="M:Dev.Dres.ClientApi.Api.ILogApi.PostApiV2LogResultByEvaluationIdWithHttpInfo(System.String,System.String,Dev.Dres.ClientApi.Model.QueryResultLog)">
              <summary>
-             Accepts result logs from participants.
+             Accepts result logs from participants  for the specified evaluation.
              </summary>
              <remarks>
              
              </remarks>
              <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="evaluationId">The evaluation ID.</param>
              <param name="session">Session Token</param>
              <param name="queryResultLog"> (optional)</param>
              <returns>ApiResponse of SuccessStatus</returns>
             </member>
-        <member name="M:Dev.Dres.ClientApi.Api.ILogApi.PostApiV2LogQueryAsync(System.String,Dev.Dres.ClientApi.Model.QueryEventLog,System.Threading.CancellationToken)">
+        <member name="M:Dev.Dres.ClientApi.Api.ILogApi.PostApiV2LogQueryByEvaluationIdAsync(System.String,System.String,Dev.Dres.ClientApi.Model.QueryEventLog,System.Threading.CancellationToken)">
              <summary>
-             Accepts query logs from participants
+             Accepts query logs from participants for the specified evaluation.
              </summary>
              <remarks>
              
              </remarks>
              <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="evaluationId">The evaluation ID.</param>
              <param name="session">Session Token</param>
              <param name="queryEventLog"> (optional)</param>
              <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
              <returns>Task of SuccessStatus</returns>
             </member>
-        <member name="M:Dev.Dres.ClientApi.Api.ILogApi.PostApiV2LogQueryWithHttpInfoAsync(System.String,Dev.Dres.ClientApi.Model.QueryEventLog,System.Threading.CancellationToken)">
+        <member name="M:Dev.Dres.ClientApi.Api.ILogApi.PostApiV2LogQueryByEvaluationIdWithHttpInfoAsync(System.String,System.String,Dev.Dres.ClientApi.Model.QueryEventLog,System.Threading.CancellationToken)">
              <summary>
-             Accepts query logs from participants
+             Accepts query logs from participants for the specified evaluation.
              </summary>
              <remarks>
              
              </remarks>
              <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="evaluationId">The evaluation ID.</param>
              <param name="session">Session Token</param>
              <param name="queryEventLog"> (optional)</param>
              <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
              <returns>Task of ApiResponse (SuccessStatus)</returns>
             </member>
-        <member name="M:Dev.Dres.ClientApi.Api.ILogApi.PostApiV2LogResultAsync(System.String,Dev.Dres.ClientApi.Model.QueryResultLog,System.Threading.CancellationToken)">
+        <member name="M:Dev.Dres.ClientApi.Api.ILogApi.PostApiV2LogResultByEvaluationIdAsync(System.String,System.String,Dev.Dres.ClientApi.Model.QueryResultLog,System.Threading.CancellationToken)">
              <summary>
-             Accepts result logs from participants.
+             Accepts result logs from participants  for the specified evaluation.
              </summary>
              <remarks>
              
              </remarks>
              <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="evaluationId">The evaluation ID.</param>
              <param name="session">Session Token</param>
              <param name="queryResultLog"> (optional)</param>
              <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
              <returns>Task of SuccessStatus</returns>
             </member>
-        <member name="M:Dev.Dres.ClientApi.Api.ILogApi.PostApiV2LogResultWithHttpInfoAsync(System.String,Dev.Dres.ClientApi.Model.QueryResultLog,System.Threading.CancellationToken)">
+        <member name="M:Dev.Dres.ClientApi.Api.ILogApi.PostApiV2LogResultByEvaluationIdWithHttpInfoAsync(System.String,System.String,Dev.Dres.ClientApi.Model.QueryResultLog,System.Threading.CancellationToken)">
              <summary>
-             Accepts result logs from participants.
+             Accepts result logs from participants  for the specified evaluation.
              </summary>
              <remarks>
              
              </remarks>
              <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="evaluationId">The evaluation ID.</param>
              <param name="session">Session Token</param>
              <param name="queryResultLog"> (optional)</param>
              <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
@@ -6552,77 +6542,85 @@
              <param name="value">Header field value.</param>
              <returns></returns>
             </member>
-        <member name="M:Dev.Dres.ClientApi.Api.LogApi.PostApiV2LogQuery(System.String,Dev.Dres.ClientApi.Model.QueryEventLog)">
+        <member name="M:Dev.Dres.ClientApi.Api.LogApi.PostApiV2LogQueryByEvaluationId(System.String,System.String,Dev.Dres.ClientApi.Model.QueryEventLog)">
              <summary>
-             Accepts query logs from participants 
+             Accepts query logs from participants for the specified evaluation. 
              </summary>
              <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="evaluationId">The evaluation ID.</param>
              <param name="session">Session Token</param>
              <param name="queryEventLog"> (optional)</param>
              <returns>SuccessStatus</returns>
             </member>
-        <member name="M:Dev.Dres.ClientApi.Api.LogApi.PostApiV2LogQueryWithHttpInfo(System.String,Dev.Dres.ClientApi.Model.QueryEventLog)">
+        <member name="M:Dev.Dres.ClientApi.Api.LogApi.PostApiV2LogQueryByEvaluationIdWithHttpInfo(System.String,System.String,Dev.Dres.ClientApi.Model.QueryEventLog)">
              <summary>
-             Accepts query logs from participants 
+             Accepts query logs from participants for the specified evaluation. 
              </summary>
              <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="evaluationId">The evaluation ID.</param>
              <param name="session">Session Token</param>
              <param name="queryEventLog"> (optional)</param>
              <returns>ApiResponse of SuccessStatus</returns>
             </member>
-        <member name="M:Dev.Dres.ClientApi.Api.LogApi.PostApiV2LogQueryAsync(System.String,Dev.Dres.ClientApi.Model.QueryEventLog,System.Threading.CancellationToken)">
+        <member name="M:Dev.Dres.ClientApi.Api.LogApi.PostApiV2LogQueryByEvaluationIdAsync(System.String,System.String,Dev.Dres.ClientApi.Model.QueryEventLog,System.Threading.CancellationToken)">
              <summary>
-             Accepts query logs from participants 
+             Accepts query logs from participants for the specified evaluation. 
              </summary>
              <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="evaluationId">The evaluation ID.</param>
              <param name="session">Session Token</param>
              <param name="queryEventLog"> (optional)</param>
              <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
              <returns>Task of SuccessStatus</returns>
             </member>
-        <member name="M:Dev.Dres.ClientApi.Api.LogApi.PostApiV2LogQueryWithHttpInfoAsync(System.String,Dev.Dres.ClientApi.Model.QueryEventLog,System.Threading.CancellationToken)">
+        <member name="M:Dev.Dres.ClientApi.Api.LogApi.PostApiV2LogQueryByEvaluationIdWithHttpInfoAsync(System.String,System.String,Dev.Dres.ClientApi.Model.QueryEventLog,System.Threading.CancellationToken)">
              <summary>
-             Accepts query logs from participants 
+             Accepts query logs from participants for the specified evaluation. 
              </summary>
              <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="evaluationId">The evaluation ID.</param>
              <param name="session">Session Token</param>
              <param name="queryEventLog"> (optional)</param>
              <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
              <returns>Task of ApiResponse (SuccessStatus)</returns>
             </member>
-        <member name="M:Dev.Dres.ClientApi.Api.LogApi.PostApiV2LogResult(System.String,Dev.Dres.ClientApi.Model.QueryResultLog)">
+        <member name="M:Dev.Dres.ClientApi.Api.LogApi.PostApiV2LogResultByEvaluationId(System.String,System.String,Dev.Dres.ClientApi.Model.QueryResultLog)">
              <summary>
-             Accepts result logs from participants. 
+             Accepts result logs from participants  for the specified evaluation. 
              </summary>
              <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="evaluationId">The evaluation ID.</param>
              <param name="session">Session Token</param>
              <param name="queryResultLog"> (optional)</param>
              <returns>SuccessStatus</returns>
             </member>
-        <member name="M:Dev.Dres.ClientApi.Api.LogApi.PostApiV2LogResultWithHttpInfo(System.String,Dev.Dres.ClientApi.Model.QueryResultLog)">
+        <member name="M:Dev.Dres.ClientApi.Api.LogApi.PostApiV2LogResultByEvaluationIdWithHttpInfo(System.String,System.String,Dev.Dres.ClientApi.Model.QueryResultLog)">
              <summary>
-             Accepts result logs from participants. 
+             Accepts result logs from participants  for the specified evaluation. 
              </summary>
              <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="evaluationId">The evaluation ID.</param>
              <param name="session">Session Token</param>
              <param name="queryResultLog"> (optional)</param>
              <returns>ApiResponse of SuccessStatus</returns>
             </member>
-        <member name="M:Dev.Dres.ClientApi.Api.LogApi.PostApiV2LogResultAsync(System.String,Dev.Dres.ClientApi.Model.QueryResultLog,System.Threading.CancellationToken)">
+        <member name="M:Dev.Dres.ClientApi.Api.LogApi.PostApiV2LogResultByEvaluationIdAsync(System.String,System.String,Dev.Dres.ClientApi.Model.QueryResultLog,System.Threading.CancellationToken)">
              <summary>
-             Accepts result logs from participants. 
+             Accepts result logs from participants  for the specified evaluation. 
              </summary>
              <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="evaluationId">The evaluation ID.</param>
              <param name="session">Session Token</param>
              <param name="queryResultLog"> (optional)</param>
              <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
              <returns>Task of SuccessStatus</returns>
             </member>
-        <member name="M:Dev.Dres.ClientApi.Api.LogApi.PostApiV2LogResultWithHttpInfoAsync(System.String,Dev.Dres.ClientApi.Model.QueryResultLog,System.Threading.CancellationToken)">
+        <member name="M:Dev.Dres.ClientApi.Api.LogApi.PostApiV2LogResultByEvaluationIdWithHttpInfoAsync(System.String,System.String,Dev.Dres.ClientApi.Model.QueryResultLog,System.Threading.CancellationToken)">
              <summary>
-             Accepts result logs from participants. 
+             Accepts result logs from participants  for the specified evaluation. 
              </summary>
              <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
+             <param name="evaluationId">The evaluation ID.</param>
              <param name="session">Session Token</param>
              <param name="queryResultLog"> (optional)</param>
              <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>

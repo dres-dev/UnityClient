@@ -122,12 +122,14 @@ namespace Dres.Unityclient
     /// <param name="resultSetAvailability">The result set availability</param>
     /// <param name="results">The results to log</param>
     /// <param name="events">The events associated with these results</param>
+    /// <param name="evaluationId">Manual override of the evaluation ID of the currently set evaluation.</param>
     /// <returns>The success / failure state of the operation</returns>
     public Task<SuccessStatus> LogResults(long timestamp, string sortType, string resultSetAvailability,
-      List<QueryResult> results, List<QueryEvent> events)
+      List<RankedAnswer> results, List<QueryEvent> events, [CanBeNull] string evaluationId = null)
     {
+      evaluationId ??= CurrentEvaluation.Id;
       return DresWrapper.LogResults(timestamp, sortType, resultSetAvailability, results, events,
-        UserDetails.SessionId);
+        UserDetails.SessionId, evaluationId);
     }
 
     /// <summary>
@@ -137,10 +139,13 @@ namespace Dres.Unityclient
     /// </summary>
     /// <param name="timestamp">The client side timestamp of this log</param>
     /// <param name="events">The events to log</param>
+    /// <param name="evaluationId">Manual override of the evaluation ID of the currently set evaluation.</param>
     /// <returns>The success / failure state of the operation</returns>
-    public Task<SuccessStatus> LogQueryEvents(long timestamp, List<QueryEvent> events)
+    public Task<SuccessStatus> LogQueryEvents(long timestamp, List<QueryEvent> events,
+      [CanBeNull] string evaluationId = null)
     {
-      return DresWrapper.LogQueryEvents(timestamp, events, UserDetails.SessionId);
+      evaluationId ??= CurrentEvaluation.Id;
+      return DresWrapper.LogQueryEvents(timestamp, events, UserDetails.SessionId, evaluationId);
     }
   }
 }
