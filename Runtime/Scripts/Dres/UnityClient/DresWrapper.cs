@@ -57,7 +57,7 @@ namespace Dres.Unityclient
       return EvaluationClientApi.GetApiV2ClientEvaluationListAsync(session);
     }
 
-    internal static Task<ApiTaskTemplateInfo> GetTaskInfo(string evaluationId, string session)
+    internal static Task<ApiClientTaskTemplateInfo> GetTaskInfo(string evaluationId, string session)
     {
       return EvaluationClientApi.GetApiV2ClientEvaluationCurrentTaskByEvaluationIdAsync(evaluationId, session);
     }
@@ -71,7 +71,8 @@ namespace Dres.Unityclient
     /// <param name="start">The optional start (in milliseconds) of the submitted item</param>
     /// <param name="end">The optional end (in milliseconds) of the submitted item</param>
     /// <returns>The submission state on success / failure.</returns>
-    internal static Task<SuccessfulSubmissionsStatus> SubmitV2(string session, string evaluationId, string item, long? start = null,
+    internal static Task<SuccessfulSubmissionsStatus> SubmitV2(string session, string evaluationId, string item,
+      long? start = null,
       long? end = null)
     {
       var answerSets = new List<ApiClientAnswerSet>
@@ -146,10 +147,11 @@ namespace Dres.Unityclient
     /// <returns>The state of success / failure of the log sending.</returns>
     /// <exception cref="ApiException">A 404 if there is no ongoing competition for this session, a 403 if there is no such user</exception>
     internal static Task<SuccessStatus> LogResults(long timestamp, string sortType, string resultSetAvailability,
-      List<QueryResult> results, List<QueryEvent> events, string session)
+      List<RankedAnswer> results, List<QueryEvent> events, string session, string evaluationId)
     {
-      var resultLog = new QueryResultLog(timestamp, sortType, resultSetAvailability, results, events);
-      return LogApi.PostApiV2LogResultAsync(session, resultLog);
+      var resultLog = new QueryResultLog(timestamp: timestamp, sortType: sortType,
+        resultSetAvailability: resultSetAvailability, results: results, events: events);
+      return LogApi.PostApiV2LogResultByEvaluationIdAsync(evaluationId, session, resultLog);
     }
 
     /// <summary>
@@ -162,10 +164,10 @@ namespace Dres.Unityclient
     /// <param name="session">The session id to which this log belongs</param>
     /// <returns>The state of success / failure of the log sending.</returns>
     /// <exception cref="ApiException">A 404 if there is no ongoing competition for this session, a 403 if there is no such user</exception>
-    internal static Task<SuccessStatus> LogQueryEvents(long timestamp, List<QueryEvent> events, string session)
+    internal static Task<SuccessStatus> LogQueryEvents(long timestamp, List<QueryEvent> events, string session, string evaluationId)
     {
       var queryEventLog = new QueryEventLog(timestamp, events);
-      return LogApi.PostApiV2LogQueryAsync(session, queryEventLog);
+      return LogApi.PostApiV2LogQueryByEvaluationIdAsync(evaluationId, session, queryEventLog);
     }
   }
 }
