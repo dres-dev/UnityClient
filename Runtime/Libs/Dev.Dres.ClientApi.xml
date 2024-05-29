@@ -2089,7 +2089,7 @@
              Initializes a new instance of the <see cref="T:Dev.Dres.ClientApi.Model.ApiTask" /> class.
              </summary>
             </member>
-        <member name="M:Dev.Dres.ClientApi.Model.ApiTask.#ctor(System.String,System.String,System.Int64,System.Int64,System.Collections.Generic.List{Dev.Dres.ClientApi.Model.ApiAnswerSet})">
+        <member name="M:Dev.Dres.ClientApi.Model.ApiTask.#ctor(System.String,System.String,System.Int64,System.Int64,System.Collections.Generic.List{Dev.Dres.ClientApi.Model.ApiSubmission})">
              <summary>
              Initializes a new instance of the <see cref="T:Dev.Dres.ClientApi.Model.ApiTask" /> class.
              </summary>
@@ -2864,7 +2864,7 @@
              Initializes a new instance of the <see cref="T:Dev.Dres.ClientApi.Model.ApiHint" /> class.
              </summary>
             </member>
-        <member name="M:Dev.Dres.ClientApi.Model.ApiHint.#ctor(Dev.Dres.ClientApi.Model.ApiHintType,System.Int64,System.Int64,System.String,System.String,System.String,System.String,System.String,Dev.Dres.ClientApi.Model.ApiTemporalRange)">
+        <member name="M:Dev.Dres.ClientApi.Model.ApiHint.#ctor(Dev.Dres.ClientApi.Model.ApiHintType,System.Int64,System.Int64,System.String,System.String,System.String,Dev.Dres.ClientApi.Model.ApiMediaItem,Dev.Dres.ClientApi.Model.ApiTemporalRange)">
              <summary>
              Initializes a new instance of the <see cref="T:Dev.Dres.ClientApi.Model.ApiHint" /> class.
              </summary>
@@ -2874,8 +2874,7 @@
              <param name="description">description.</param>
              <param name="path">path.</param>
              <param name="dataType">dataType.</param>
-             <param name="mediaItem">mediaItem.</param>
-             <param name="mediaItemName">mediaItemName.</param>
+             <param name="item">item.</param>
              <param name="range">range.</param>
             </member>
         <member name="P:Dev.Dres.ClientApi.Model.ApiHint.Start">
@@ -2903,14 +2902,9 @@
              Gets or Sets DataType
              </summary>
             </member>
-        <member name="P:Dev.Dres.ClientApi.Model.ApiHint.MediaItem">
+        <member name="P:Dev.Dres.ClientApi.Model.ApiHint.Item">
              <summary>
-             Gets or Sets MediaItem
-             </summary>
-            </member>
-        <member name="P:Dev.Dres.ClientApi.Model.ApiHint.MediaItemName">
-             <summary>
-             Gets or Sets MediaItemName
+             Gets or Sets Item
              </summary>
             </member>
         <member name="P:Dev.Dres.ClientApi.Model.ApiHint.Range">
@@ -3262,7 +3256,7 @@
              Initializes a new instance of the <see cref="T:Dev.Dres.ClientApi.Model.ApiEvaluationTemplate" /> class.
              </summary>
             </member>
-        <member name="M:Dev.Dres.ClientApi.Model.ApiEvaluationTemplate.#ctor(System.String,System.String,System.String,System.Int64,System.Int64,System.Collections.Generic.List{Dev.Dres.ClientApi.Model.ApiTaskType},System.Collections.Generic.List{Dev.Dres.ClientApi.Model.ApiTaskGroup},System.Collections.Generic.List{Dev.Dres.ClientApi.Model.ApiTaskTemplate},System.Collections.Generic.List{Dev.Dres.ClientApi.Model.ApiTeam},System.Collections.Generic.List{Dev.Dres.ClientApi.Model.ApiTeamGroup},System.Collections.Generic.List{System.String})">
+        <member name="M:Dev.Dres.ClientApi.Model.ApiEvaluationTemplate.#ctor(System.String,System.String,System.String,System.Int64,System.Int64,System.Collections.Generic.List{Dev.Dres.ClientApi.Model.ApiTaskType},System.Collections.Generic.List{Dev.Dres.ClientApi.Model.ApiTaskGroup},System.Collections.Generic.List{Dev.Dres.ClientApi.Model.ApiTaskTemplate},System.Collections.Generic.List{Dev.Dres.ClientApi.Model.ApiTeam},System.Collections.Generic.List{Dev.Dres.ClientApi.Model.ApiTeamGroup},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String})">
              <summary>
              Initializes a new instance of the <see cref="T:Dev.Dres.ClientApi.Model.ApiEvaluationTemplate" /> class.
              </summary>
@@ -3277,6 +3271,7 @@
              <param name="teams">teams (required).</param>
              <param name="teamGroups">teamGroups (required).</param>
              <param name="judges">judges (required).</param>
+             <param name="viewers">viewers (required).</param>
             </member>
         <member name="P:Dev.Dres.ClientApi.Model.ApiEvaluationTemplate.Id">
              <summary>
@@ -3331,6 +3326,11 @@
         <member name="P:Dev.Dres.ClientApi.Model.ApiEvaluationTemplate.Judges">
              <summary>
              Gets or Sets Judges
+             </summary>
+            </member>
+        <member name="P:Dev.Dres.ClientApi.Model.ApiEvaluationTemplate.Viewers">
+             <summary>
+             Gets or Sets Viewers
              </summary>
             </member>
         <member name="M:Dev.Dres.ClientApi.Model.ApiEvaluationTemplate.ToString">
@@ -4659,7 +4659,7 @@
              ApiClientAnswer
              </summary>
             </member>
-        <member name="M:Dev.Dres.ClientApi.Model.ApiClientAnswer.#ctor(System.String,System.String,System.String,System.Int64,System.Int64)">
+        <member name="M:Dev.Dres.ClientApi.Model.ApiClientAnswer.#ctor(System.String,System.String,System.String,System.Nullable{System.Int64},System.Nullable{System.Int64})">
              <summary>
              Initializes a new instance of the <see cref="T:Dev.Dres.ClientApi.Model.ApiClientAnswer" /> class.
              </summary>
@@ -4970,14 +4970,14 @@
              Initializes a new instance of the <see cref="T:Dev.Dres.ClientApi.Model.ApiTarget" /> class.
              </summary>
             </member>
-        <member name="M:Dev.Dres.ClientApi.Model.ApiTarget.#ctor(Dev.Dres.ClientApi.Model.ApiTargetType,System.String,Dev.Dres.ClientApi.Model.ApiTemporalRange,System.String)">
+        <member name="M:Dev.Dres.ClientApi.Model.ApiTarget.#ctor(Dev.Dres.ClientApi.Model.ApiTargetType,System.String,Dev.Dres.ClientApi.Model.ApiTemporalRange,Dev.Dres.ClientApi.Model.ApiMediaItem)">
              <summary>
              Initializes a new instance of the <see cref="T:Dev.Dres.ClientApi.Model.ApiTarget" /> class.
              </summary>
              <param name="type">type (required).</param>
              <param name="target">target.</param>
              <param name="range">range.</param>
-             <param name="name">name.</param>
+             <param name="item">item.</param>
             </member>
         <member name="P:Dev.Dres.ClientApi.Model.ApiTarget.Target">
              <summary>
@@ -4989,9 +4989,9 @@
              Gets or Sets Range
              </summary>
             </member>
-        <member name="P:Dev.Dres.ClientApi.Model.ApiTarget.Name">
+        <member name="P:Dev.Dres.ClientApi.Model.ApiTarget.Item">
              <summary>
-             Gets or Sets Name
+             Gets or Sets Item
              </summary>
             </member>
         <member name="M:Dev.Dres.ClientApi.Model.ApiTarget.ToString">
@@ -6081,40 +6081,6 @@
              Represents a collection of functions to interact with the API endpoints
              </summary>
             </member>
-        <member name="M:Dev.Dres.ClientApi.Api.ISubmissionApi.GetApiV1Submit(System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
-             <summary>
-             Endpoint to accept submissions
-             </summary>
-             <remarks>
-             This has been the submission endpoint for version 1. Please refrain from using it and migrate to the v2 endpoint.
-             </remarks>
-             <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
-             <param name="collection">Collection identifier. Optional, in which case the default collection for the run will be considered. (optional)</param>
-             <param name="item">Identifier for the actual media object or media file. (optional)</param>
-             <param name="text">Text to be submitted. ONLY for tasks with target type TEXT. If this parameter is provided, it superseeds all athers. (optional)</param>
-             <param name="frame">Frame number for media with temporal progression (e.g., video). (optional)</param>
-             <param name="shot">Shot number for media with temporal progression (e.g., video). (optional)</param>
-             <param name="timecode">Timecode for media with temporal progression (e.g,. video). (optional)</param>
-             <param name="session">Session Token (optional)</param>
-             <returns>SuccessfulSubmissionsStatus</returns>
-            </member>
-        <member name="M:Dev.Dres.ClientApi.Api.ISubmissionApi.GetApiV1SubmitWithHttpInfo(System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
-             <summary>
-             Endpoint to accept submissions
-             </summary>
-             <remarks>
-             This has been the submission endpoint for version 1. Please refrain from using it and migrate to the v2 endpoint.
-             </remarks>
-             <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
-             <param name="collection">Collection identifier. Optional, in which case the default collection for the run will be considered. (optional)</param>
-             <param name="item">Identifier for the actual media object or media file. (optional)</param>
-             <param name="text">Text to be submitted. ONLY for tasks with target type TEXT. If this parameter is provided, it superseeds all athers. (optional)</param>
-             <param name="frame">Frame number for media with temporal progression (e.g., video). (optional)</param>
-             <param name="shot">Shot number for media with temporal progression (e.g., video). (optional)</param>
-             <param name="timecode">Timecode for media with temporal progression (e.g,. video). (optional)</param>
-             <param name="session">Session Token (optional)</param>
-             <returns>ApiResponse of SuccessfulSubmissionsStatus</returns>
-            </member>
         <member name="M:Dev.Dres.ClientApi.Api.ISubmissionApi.PostApiV2SubmitByEvaluationId(System.String,Dev.Dres.ClientApi.Model.ApiClientSubmission,System.String)">
              <summary>
              Endpoint to accept submissions.
@@ -6124,7 +6090,7 @@
              </remarks>
              <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
              <param name="evaluationId">The ID of the evaluation the submission belongs to.</param>
-             <param name="apiClientSubmission"></param>
+             <param name="apiClientSubmission">Some notes regarding the submission format. At least one answerSet is required, taskId, taskName are inferred if not provided,  at least one answer is required, mediaItemCollectionName is inferred if not provided,  start and end should be provided in milliseconds.For most evaluation setups, an answer is built in one of the three following ways: A) only text is required: just provide the text property with a meaningful entry B) only a mediaItemName is required: just provide the mediaItemName, optionally with the collection name. C) a specific portion of a mediaItem is required: provide mediaItemName, start and end, optionally with collection name</param>
              <param name="session">Session Token (optional)</param>
              <returns>SuccessfulSubmissionsStatus</returns>
             </member>
@@ -6137,45 +6103,9 @@
              </remarks>
              <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
              <param name="evaluationId">The ID of the evaluation the submission belongs to.</param>
-             <param name="apiClientSubmission"></param>
+             <param name="apiClientSubmission">Some notes regarding the submission format. At least one answerSet is required, taskId, taskName are inferred if not provided,  at least one answer is required, mediaItemCollectionName is inferred if not provided,  start and end should be provided in milliseconds.For most evaluation setups, an answer is built in one of the three following ways: A) only text is required: just provide the text property with a meaningful entry B) only a mediaItemName is required: just provide the mediaItemName, optionally with the collection name. C) a specific portion of a mediaItem is required: provide mediaItemName, start and end, optionally with collection name</param>
              <param name="session">Session Token (optional)</param>
              <returns>ApiResponse of SuccessfulSubmissionsStatus</returns>
-            </member>
-        <member name="M:Dev.Dres.ClientApi.Api.ISubmissionApi.GetApiV1SubmitAsync(System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.Threading.CancellationToken)">
-             <summary>
-             Endpoint to accept submissions
-             </summary>
-             <remarks>
-             This has been the submission endpoint for version 1. Please refrain from using it and migrate to the v2 endpoint.
-             </remarks>
-             <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
-             <param name="collection">Collection identifier. Optional, in which case the default collection for the run will be considered. (optional)</param>
-             <param name="item">Identifier for the actual media object or media file. (optional)</param>
-             <param name="text">Text to be submitted. ONLY for tasks with target type TEXT. If this parameter is provided, it superseeds all athers. (optional)</param>
-             <param name="frame">Frame number for media with temporal progression (e.g., video). (optional)</param>
-             <param name="shot">Shot number for media with temporal progression (e.g., video). (optional)</param>
-             <param name="timecode">Timecode for media with temporal progression (e.g,. video). (optional)</param>
-             <param name="session">Session Token (optional)</param>
-             <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-             <returns>Task of SuccessfulSubmissionsStatus</returns>
-            </member>
-        <member name="M:Dev.Dres.ClientApi.Api.ISubmissionApi.GetApiV1SubmitWithHttpInfoAsync(System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.Threading.CancellationToken)">
-             <summary>
-             Endpoint to accept submissions
-             </summary>
-             <remarks>
-             This has been the submission endpoint for version 1. Please refrain from using it and migrate to the v2 endpoint.
-             </remarks>
-             <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
-             <param name="collection">Collection identifier. Optional, in which case the default collection for the run will be considered. (optional)</param>
-             <param name="item">Identifier for the actual media object or media file. (optional)</param>
-             <param name="text">Text to be submitted. ONLY for tasks with target type TEXT. If this parameter is provided, it superseeds all athers. (optional)</param>
-             <param name="frame">Frame number for media with temporal progression (e.g., video). (optional)</param>
-             <param name="shot">Shot number for media with temporal progression (e.g., video). (optional)</param>
-             <param name="timecode">Timecode for media with temporal progression (e.g,. video). (optional)</param>
-             <param name="session">Session Token (optional)</param>
-             <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-             <returns>Task of ApiResponse (SuccessfulSubmissionsStatus)</returns>
             </member>
         <member name="M:Dev.Dres.ClientApi.Api.ISubmissionApi.PostApiV2SubmitByEvaluationIdAsync(System.String,Dev.Dres.ClientApi.Model.ApiClientSubmission,System.String,System.Threading.CancellationToken)">
              <summary>
@@ -6186,7 +6116,7 @@
              </remarks>
              <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
              <param name="evaluationId">The ID of the evaluation the submission belongs to.</param>
-             <param name="apiClientSubmission"></param>
+             <param name="apiClientSubmission">Some notes regarding the submission format. At least one answerSet is required, taskId, taskName are inferred if not provided,  at least one answer is required, mediaItemCollectionName is inferred if not provided,  start and end should be provided in milliseconds.For most evaluation setups, an answer is built in one of the three following ways: A) only text is required: just provide the text property with a meaningful entry B) only a mediaItemName is required: just provide the mediaItemName, optionally with the collection name. C) a specific portion of a mediaItem is required: provide mediaItemName, start and end, optionally with collection name</param>
              <param name="session">Session Token (optional)</param>
              <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
              <returns>Task of SuccessfulSubmissionsStatus</returns>
@@ -6200,7 +6130,7 @@
              </remarks>
              <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
              <param name="evaluationId">The ID of the evaluation the submission belongs to.</param>
-             <param name="apiClientSubmission"></param>
+             <param name="apiClientSubmission">Some notes regarding the submission format. At least one answerSet is required, taskId, taskName are inferred if not provided,  at least one answer is required, mediaItemCollectionName is inferred if not provided,  start and end should be provided in milliseconds.For most evaluation setups, an answer is built in one of the three following ways: A) only text is required: just provide the text property with a meaningful entry B) only a mediaItemName is required: just provide the mediaItemName, optionally with the collection name. C) a specific portion of a mediaItem is required: provide mediaItemName, start and end, optionally with collection name</param>
              <param name="session">Session Token (optional)</param>
              <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
              <returns>Task of ApiResponse (SuccessfulSubmissionsStatus)</returns>
@@ -6267,71 +6197,13 @@
              <param name="value">Header field value.</param>
              <returns></returns>
             </member>
-        <member name="M:Dev.Dres.ClientApi.Api.SubmissionApi.GetApiV1Submit(System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
-             <summary>
-             Endpoint to accept submissions This has been the submission endpoint for version 1. Please refrain from using it and migrate to the v2 endpoint.
-             </summary>
-             <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
-             <param name="collection">Collection identifier. Optional, in which case the default collection for the run will be considered. (optional)</param>
-             <param name="item">Identifier for the actual media object or media file. (optional)</param>
-             <param name="text">Text to be submitted. ONLY for tasks with target type TEXT. If this parameter is provided, it superseeds all athers. (optional)</param>
-             <param name="frame">Frame number for media with temporal progression (e.g., video). (optional)</param>
-             <param name="shot">Shot number for media with temporal progression (e.g., video). (optional)</param>
-             <param name="timecode">Timecode for media with temporal progression (e.g,. video). (optional)</param>
-             <param name="session">Session Token (optional)</param>
-             <returns>SuccessfulSubmissionsStatus</returns>
-            </member>
-        <member name="M:Dev.Dres.ClientApi.Api.SubmissionApi.GetApiV1SubmitWithHttpInfo(System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
-             <summary>
-             Endpoint to accept submissions This has been the submission endpoint for version 1. Please refrain from using it and migrate to the v2 endpoint.
-             </summary>
-             <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
-             <param name="collection">Collection identifier. Optional, in which case the default collection for the run will be considered. (optional)</param>
-             <param name="item">Identifier for the actual media object or media file. (optional)</param>
-             <param name="text">Text to be submitted. ONLY for tasks with target type TEXT. If this parameter is provided, it superseeds all athers. (optional)</param>
-             <param name="frame">Frame number for media with temporal progression (e.g., video). (optional)</param>
-             <param name="shot">Shot number for media with temporal progression (e.g., video). (optional)</param>
-             <param name="timecode">Timecode for media with temporal progression (e.g,. video). (optional)</param>
-             <param name="session">Session Token (optional)</param>
-             <returns>ApiResponse of SuccessfulSubmissionsStatus</returns>
-            </member>
-        <member name="M:Dev.Dres.ClientApi.Api.SubmissionApi.GetApiV1SubmitAsync(System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.Threading.CancellationToken)">
-             <summary>
-             Endpoint to accept submissions This has been the submission endpoint for version 1. Please refrain from using it and migrate to the v2 endpoint.
-             </summary>
-             <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
-             <param name="collection">Collection identifier. Optional, in which case the default collection for the run will be considered. (optional)</param>
-             <param name="item">Identifier for the actual media object or media file. (optional)</param>
-             <param name="text">Text to be submitted. ONLY for tasks with target type TEXT. If this parameter is provided, it superseeds all athers. (optional)</param>
-             <param name="frame">Frame number for media with temporal progression (e.g., video). (optional)</param>
-             <param name="shot">Shot number for media with temporal progression (e.g., video). (optional)</param>
-             <param name="timecode">Timecode for media with temporal progression (e.g,. video). (optional)</param>
-             <param name="session">Session Token (optional)</param>
-             <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-             <returns>Task of SuccessfulSubmissionsStatus</returns>
-            </member>
-        <member name="M:Dev.Dres.ClientApi.Api.SubmissionApi.GetApiV1SubmitWithHttpInfoAsync(System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.Threading.CancellationToken)">
-             <summary>
-             Endpoint to accept submissions This has been the submission endpoint for version 1. Please refrain from using it and migrate to the v2 endpoint.
-             </summary>
-             <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
-             <param name="collection">Collection identifier. Optional, in which case the default collection for the run will be considered. (optional)</param>
-             <param name="item">Identifier for the actual media object or media file. (optional)</param>
-             <param name="text">Text to be submitted. ONLY for tasks with target type TEXT. If this parameter is provided, it superseeds all athers. (optional)</param>
-             <param name="frame">Frame number for media with temporal progression (e.g., video). (optional)</param>
-             <param name="shot">Shot number for media with temporal progression (e.g., video). (optional)</param>
-             <param name="timecode">Timecode for media with temporal progression (e.g,. video). (optional)</param>
-             <param name="session">Session Token (optional)</param>
-             <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-             <returns>Task of ApiResponse (SuccessfulSubmissionsStatus)</returns>
-            </member>
         <member name="M:Dev.Dres.ClientApi.Api.SubmissionApi.PostApiV2SubmitByEvaluationId(System.String,Dev.Dres.ClientApi.Model.ApiClientSubmission,System.String)">
              <summary>
              Endpoint to accept submissions. 
              </summary>
              <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
              <param name="evaluationId">The ID of the evaluation the submission belongs to.</param>
-             <param name="apiClientSubmission"></param>
+             <param name="apiClientSubmission">Some notes regarding the submission format. At least one answerSet is required, taskId, taskName are inferred if not provided,  at least one answer is required, mediaItemCollectionName is inferred if not provided,  start and end should be provided in milliseconds.For most evaluation setups, an answer is built in one of the three following ways: A) only text is required: just provide the text property with a meaningful entry B) only a mediaItemName is required: just provide the mediaItemName, optionally with the collection name. C) a specific portion of a mediaItem is required: provide mediaItemName, start and end, optionally with collection name</param>
              <param name="session">Session Token (optional)</param>
              <returns>SuccessfulSubmissionsStatus</returns>
             </member>
@@ -6341,7 +6213,7 @@
              </summary>
              <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
              <param name="evaluationId">The ID of the evaluation the submission belongs to.</param>
-             <param name="apiClientSubmission"></param>
+             <param name="apiClientSubmission">Some notes regarding the submission format. At least one answerSet is required, taskId, taskName are inferred if not provided,  at least one answer is required, mediaItemCollectionName is inferred if not provided,  start and end should be provided in milliseconds.For most evaluation setups, an answer is built in one of the three following ways: A) only text is required: just provide the text property with a meaningful entry B) only a mediaItemName is required: just provide the mediaItemName, optionally with the collection name. C) a specific portion of a mediaItem is required: provide mediaItemName, start and end, optionally with collection name</param>
              <param name="session">Session Token (optional)</param>
              <returns>ApiResponse of SuccessfulSubmissionsStatus</returns>
             </member>
@@ -6351,7 +6223,7 @@
              </summary>
              <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
              <param name="evaluationId">The ID of the evaluation the submission belongs to.</param>
-             <param name="apiClientSubmission"></param>
+             <param name="apiClientSubmission">Some notes regarding the submission format. At least one answerSet is required, taskId, taskName are inferred if not provided,  at least one answer is required, mediaItemCollectionName is inferred if not provided,  start and end should be provided in milliseconds.For most evaluation setups, an answer is built in one of the three following ways: A) only text is required: just provide the text property with a meaningful entry B) only a mediaItemName is required: just provide the mediaItemName, optionally with the collection name. C) a specific portion of a mediaItem is required: provide mediaItemName, start and end, optionally with collection name</param>
              <param name="session">Session Token (optional)</param>
              <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
              <returns>Task of SuccessfulSubmissionsStatus</returns>
@@ -6362,7 +6234,7 @@
              </summary>
              <exception cref="T:Dev.Dres.ClientApi.Client.ApiException">Thrown when fails to make API call</exception>
              <param name="evaluationId">The ID of the evaluation the submission belongs to.</param>
-             <param name="apiClientSubmission"></param>
+             <param name="apiClientSubmission">Some notes regarding the submission format. At least one answerSet is required, taskId, taskName are inferred if not provided,  at least one answer is required, mediaItemCollectionName is inferred if not provided,  start and end should be provided in milliseconds.For most evaluation setups, an answer is built in one of the three following ways: A) only text is required: just provide the text property with a meaningful entry B) only a mediaItemName is required: just provide the mediaItemName, optionally with the collection name. C) a specific portion of a mediaItem is required: provide mediaItemName, start and end, optionally with collection name</param>
              <param name="session">Session Token (optional)</param>
              <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
              <returns>Task of ApiResponse (SuccessfulSubmissionsStatus)</returns>

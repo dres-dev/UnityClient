@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Dev.Dres.ClientApi.Model;
 using JetBrains.Annotations;
@@ -85,31 +84,6 @@ namespace Dres.Unityclient
     {
       evaluationId ??= CurrentEvaluation.Id;
       return DresWrapper.SubmitTextV2(UserDetails.SessionId, evaluationId, text);
-    }
-
-
-    /// <summary>
-    /// Submits the given item (and optionally frame informaiton) to the DRES instance as current user.
-    /// </summary>
-    /// <param name="item">The item name or identifier to submit</param>
-    /// <param name="frame">Optional, the item's frame number. This can likely be omitted, if there is no such
-    /// concept as frames for the given item (e.g. for videos, a frame is reasonable while for images it isn't.</param>
-    /// <returns>The success / failure state of the operation</returns>
-    [Obsolete("Obsolete")]
-    public Task<SuccessfulSubmissionsStatus> SubmitResult(string item, int? frame = null)
-    {
-      return DresWrapper.Submit(item, UserDetails.SessionId, frame);
-    }
-
-    /// <summary>
-    /// Submits the given text to the DRES instance as current user
-    /// </summary>
-    /// <param name="text">The text to submit (this can be anything).</param>
-    /// <returns>The success / failure state of the operation</returns>
-    [Obsolete("Obsolete")]
-    public Task<SuccessfulSubmissionsStatus> SubmitTextualResult(string text)
-    {
-      return DresWrapper.SubmitText(text, UserDetails.SessionId);
     }
 
     /// <summary>

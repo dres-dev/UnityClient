@@ -1,0 +1,67 @@
+name: Package Release
+on:
+  push:
+    branches:
+      - 'main'
+    paths:
+      - 'package.json'
+permissions:
+  contents: write
+jobs:
+  Package-Artifacts:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout source code
+      - id: checkout-code
+        name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          path: package
+      # Extract package json
+      - id: json
+        name: Extract package json
+        run: |
+          package_json=`cat package/package.json`
+          package_json="${package_json//$'\n'/''}"
+          package_json="${package_json//$'\r'/''}"
+          echo "package_json=$package_json" >> $GITHUB_OUTPUT
+      # Extract package version
+      - id: version
+        name: Extract version
+        run: |
+          echo ${{ steps.json.outputs.package_json }}
+          package_version="${{fromJson(steps.json.outputs.package_json).version}}"
+          package_name="${{fromJson(steps.json.outputs.package_json).name}}"
+          echo "package_version=$package_version" >> $GITHUB_OUTPUT
+          echo "package_tag=v$package_version" >> $GITHUB_OUTPUT
+          echo "package_name=$package_name" >> $GITHUB_OUTPUT
+          if [[ $package_version == 0.* ]] ;
+          then
+            echo "prerelease=true" >> $GITHUB_OUTPUT
+          else
+            echo "prerelease=false" >> $GITHUB_OUTPUT
+          fi
+      - id: latesttag
+        name: Get latest tag
+        working-directory: ./package
+        run: |
+          latest_tag=$(git tag -l | sort -V --reverse | sed -n 2p)
+          echo "latest_tag=$latest_tag" >> $GITHUB_OUTPUT
+      # Rename and tar package
+      - id: prepare-package
+        name: Prepare package
+        if: ${{ steps.latesttag.outputs.latest_tag != steps.version.outputs.package_tag }}
+        run: |
+          tar -czvf "${{steps.version.outputs.package_name}}.tgz" package
+      # Upload artifact
+      - id: create-release
+        name: GH Release
+        if: ${{ steps.latesttag.outputs.latest_tag != steps.version.outputs.package_tag }}
+        uses: softprops/action-gh-release@v0.1.15
+        with:
+          name: Release ${{ steps.version.outputs.package_version }}
+          tag_name: ${{ steps.version.outputs.package_tag }}
+          generate_release_notes: true
+          prerelease: ${{ steps.version.outputs.prerelease }}
+          files: |
+            ${{steps.version.outputs.package_name}}.tgz

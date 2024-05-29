@@ -79,7 +79,7 @@ namespace Dres.Unityclient
       {
         new(answers: new List<ApiClientAnswer>
         {
-          new(mediaItemName: item, start: start.GetValueOrDefault(), end: end.GetValueOrDefault())
+          new(mediaItemName: item, start: start, end: end)
         })
       };
       var apiClientSubmission = new ApiClientSubmission(answerSets);
@@ -99,39 +99,6 @@ namespace Dres.Unityclient
       var apiClientSubmission = new ApiClientSubmission(answerSets);
       return SubmissionApi.PostApiV2SubmitByEvaluationIdAsync(evaluationId, apiClientSubmission, session);
     }
-
-    // TODO: Once the functionality of the new API is confirmed, implement bulk submission
-
-    /// <summary>
-    /// Submits an item to the DRES endpoint.
-    /// Submissions are only allowed during active competitions (inferred from the given sesssion id)
-    /// </summary>
-    /// <param name="item">The name of the item (or identifier) to submit</param>
-    /// <param name="session">The session id to which this submission belongs</param>
-    /// <param name="frame">Optionally a frame number to specify which frame of the item.
-    /// If no notion of frames exist for the item, this can likely be omitted.</param>
-    /// <returns>The submission state on success / failure.</returns>
-    /// <exception cref="ApiException">A 404 if there is no ongoing competition for this session, a 403 if there is no such user</exception>
-    [Obsolete("Obsolete")]
-    internal static Task<SuccessfulSubmissionsStatus> Submit(string item, string session, int? frame = null)
-    {
-      return SubmissionApi.GetApiV1SubmitAsync(item: item, frame: frame, session: session);
-    }
-
-    /// <summary>
-    /// Submits given TEXT to the DRES endpoint.
-    /// Submissions are only allowed during active competitions (inferred from the given sesssion id)
-    /// </summary>
-    /// <param name="text">The submission in textual form (might also be a number) submit</param>
-    /// <param name="session">The session id to which this submission belongs</param>
-    /// <returns>The submission state on success / failure.</returns>
-    /// <exception cref="ApiException">A 404 if there is no ongoing competition for this session, a 403 if there is no such user</exception>
-    [Obsolete("Obsolete")]
-    internal static Task<SuccessfulSubmissionsStatus> SubmitText(string text, string session)
-    {
-      return SubmissionApi.GetApiV1SubmitAsync(text: text, session: session);
-    }
-
 
     /// <summary>
     /// Send result logs to the DRES endpoint.
@@ -164,7 +131,8 @@ namespace Dres.Unityclient
     /// <param name="session">The session id to which this log belongs</param>
     /// <returns>The state of success / failure of the log sending.</returns>
     /// <exception cref="ApiException">A 404 if there is no ongoing competition for this session, a 403 if there is no such user</exception>
-    internal static Task<SuccessStatus> LogQueryEvents(long timestamp, List<QueryEvent> events, string session, string evaluationId)
+    internal static Task<SuccessStatus> LogQueryEvents(long timestamp, List<QueryEvent> events, string session,
+      string evaluationId)
     {
       var queryEventLog = new QueryEventLog(timestamp, events);
       return LogApi.PostApiV2LogQueryByEvaluationIdAsync(evaluationId, session, queryEventLog);
